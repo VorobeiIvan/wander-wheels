@@ -1,0 +1,29 @@
+@import '~normalize.css';
+@import './container.css';
+@import './fonts-inter.css';
+@import './fonts-hurricane.css';
+@import './reset.css';
+@import './variables.css';
+
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FFFFFF;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

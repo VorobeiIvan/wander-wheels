@@ -1,8 +1,8 @@
 {
-  "name": "react-new-repo",
+  "name": "wanderw-wheels",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://VorobeiIvan.github.io/react-new-repo/",
+  "homepage": "https://VorobeiIvan.github.io/wanderw-wheels/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",

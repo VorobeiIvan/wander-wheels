@@ -1,0 +1,50 @@
+.radio-title {
+  margin-top: 32px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.radio-list {
+  display: flex;
+  gap: 10px;
+}
+
+.radio-item {
+  border-radius: 10px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+}
+
+.radio-label {
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-direction: column;
+  width: 112px;
+  height: 95px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.radio {}
+
+.radio:checked+.radio-label {
+  border-color: var(--accent-color);
+}
+
+.radio-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+}
+
+.hr {
+  margin: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(16, 24, 40, 0.1);
+  border: none;
+}

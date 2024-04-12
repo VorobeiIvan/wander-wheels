@@ -12,7 +12,13 @@
 @import './components/SocialMedia.css';
 @import './pages/HomePage.css';
 @import './components/BookingForm.css';
-
+@import './components/Checkbox.css';
+@import './pages/CatalogPage.css';
+@import './pages/FavoritesPage.css';
+@import './components/Input.css';
+@import './components/Radio.css';
+@import './components/FiltersForm.css';
+@import './components/Card.css';
 
 body {
   font-family: 'Inter', sans-serif;

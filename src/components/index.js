@@ -6,6 +6,11 @@ import Navigation from './Navigation.jsx';
 import Contacts from './Contacts.jsx';
 import SocialMedia from './SocialMedia.jsx';
 import BookingForm from './BookingForm.jsx';
+import Input from './Input.jsx';
+import Radio from './Radio.jsx';
+import FiltersForm from './FiltersForm.jsx';
+import Checkbox from './Checkbox.jsx';
+import Card from './Card.jsx';
 
 export {
   App,
@@ -16,4 +21,9 @@ export {
   Contacts,
   SocialMedia,
   BookingForm,
+  Input,
+  Radio,
+  FiltersForm,
+  Checkbox,
+  Card,
 };

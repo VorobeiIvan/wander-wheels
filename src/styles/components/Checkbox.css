@@ -1,0 +1,48 @@
+.checkbox-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.checkbox-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.checkbox-item {
+  border-radius: 10px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+}
+
+.checkbox-label {
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-direction: column;
+  width: 112px;
+  height: 95px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+.checkbox {}
+
+.checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hr {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(16, 24, 40, 0.1);
+}
+
+.checked {
+  border: 1px solid var(--accent-color);
+}

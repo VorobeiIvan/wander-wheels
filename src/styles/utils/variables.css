@@ -1,0 +1,52 @@
+:root {
+  --accent-color: #e44848;
+  --accent-color-hover: #d84343;
+  --text: #475467;
+  --main: #101828;
+  --rating: #ffc531;
+  --block-features: #f2f4f7;
+  --inputs: #f7f7f7;
+  --form-text-color: rgba(229, 231, 235, 0.6);
+  --placeholder-text-color: rgba(229, 231, 235, 0.8);
+ 
+  /* Fonts */
+  --main-font-family: 'Inter', sans-serif;
+
+  /* Header */
+  --header-text-color: #f2f4f7;
+  --header-background-color: #475467;
+  --header-navigation-font-size: 16px;
+  --header-navigation-font-weight: 500;
+
+  /* Logo */
+  --logo-text-color: var(--accent-color);
+  --logo-font-size: 32px;
+  --logo-font-family: 'Hurricane';
+
+  /* Footer */
+  --footer-text-color: rgba(229, 231, 235, 0.6);
+  --footer-background-color: var(--text);
+  --footer-navigation-font-size: 12px;
+  --footer-navigation-font-weight: 500;
+
+  /* Contacts */
+  --contacts-text-color: rgba(229, 231, 235, 0.8);
+  --contacts-font-size: 16px;
+  --contacts-font-weight: 500;
+
+  /* Social Media */
+
+  --social-media-content-color: rgba(229, 231, 235, 0.8);
+
+  /* Hero */
+  --hero-text-color: #f2f4f7;
+  --hero-font-size-title: 40px;
+  --hero-font-size-text: 32px;
+  --hero-font-weight: 500;
+
+  /* Button */
+  --button-text-color: #f2f4f7;
+  --button-background-color: var(--accent-color);
+  --button-font-size: 16px;
+  --button-font-weight: 500;
+}

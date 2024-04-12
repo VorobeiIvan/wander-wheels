@@ -4,6 +4,13 @@
 @import './fonts/fonts-hurricane.css';
 @import './utils/variables.css';
 @import './utils/container.css';
+@import './components/Logo.css';
+@import './components/Navigation.css';
+@import './components/Header.css';
+@import './components/Contacts.css';
+@import './components/Footer.css';
+@import './components/SocialMedia.css';
+
 
 body {
   margin: 0;

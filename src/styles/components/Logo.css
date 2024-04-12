@@ -1,0 +1,11 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
+  font-size: var(--logo-font-size);
+  font-family: var(--logo-font-family);
+  color: var(--logo-text-color);
+}

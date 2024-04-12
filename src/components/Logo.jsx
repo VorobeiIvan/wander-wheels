@@ -1,5 +1,5 @@
-import '../styles/index.css';
 import { LogoIcon } from './Icons';
+import '../styles/index.css';
 
 const Logo = () => {
   return (

@@ -1,0 +1,30 @@
+.social-media-list {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--social-media-content-color);
+  text-decoration: none;
+  border: 1px solid var(--social-media-content-color);
+  border-radius: 10px;
+  padding: 4px;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+}
+
+.social-media-svg {
+  width: 24px;
+  height: 24px;
+}

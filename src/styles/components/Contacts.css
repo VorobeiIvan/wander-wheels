@@ -1,0 +1,32 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 4px;
+}
+
+.contact-link {
+    color: var(--footer-text-color);
+    font-size: var(--footer-navigation-font-size);
+    font-weight: var(--footer-navigation-font-weight);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color-hover);
+    }
+}
+
+.contact-title {
+    font-size: (--footer-navigation-font-size);
+    color: var(--accent-color);
+}
+
+.address {
+    margin-top: 4px;
+    font-style: normal;
+}

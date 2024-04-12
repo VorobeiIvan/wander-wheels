@@ -5,5 +5,15 @@ import Footer from './Footer.jsx';
 import Navigation from './Navigation.jsx';
 import Contacts from './Contacts.jsx';
 import SocialMedia from './SocialMedia.jsx';
+import BookingForm from './BookingForm.jsx';
 
-export { App, Logo, Header, Footer, Navigation, Contacts, SocialMedia };
+export {
+  App,
+  Logo,
+  Header,
+  Footer,
+  Navigation,
+  Contacts,
+  SocialMedia,
+  BookingForm,
+};

@@ -10,10 +10,11 @@
 @import './components/Contacts.css';
 @import './components/Footer.css';
 @import './components/SocialMedia.css';
+@import './pages/HomePage.css';
+@import './components/BookingForm.css';
 
 
 body {
-  margin: 0;
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

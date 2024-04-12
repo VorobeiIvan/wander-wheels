@@ -1,4 +1,4 @@
-import './App.css';
+import '../styles/index.css';
 
 const App = () => {
   return <div className="container"></div>;

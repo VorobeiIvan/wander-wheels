@@ -1,11 +1,11 @@
-.search-page {
+.catalog-page {
   display: flex;
   gap: 64px;
   justify-content: center;
   padding: 100px 64px;
 }
 
-.section-search-card {
+.section-catalog-card {
   display: flex;
   flex-direction: column;
   align-items: center;

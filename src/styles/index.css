@@ -19,6 +19,7 @@
 @import './components/Radio.css';
 @import './components/FiltersForm.css';
 @import './components/Card.css';
+@import './components/Button.css';
 
 body {
   font-family: 'Inter', sans-serif;

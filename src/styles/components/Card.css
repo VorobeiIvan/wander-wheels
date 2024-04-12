@@ -1,0 +1,107 @@
+.section-search-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: #101828;
+}
+
+.search-card-wrapper {
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid rgba(16, 24, 40, 0.2);
+}
+
+.search-card-image {
+    width: 290px;
+    height: 310px;
+    /* background-color: #101828; */
+}
+
+.search-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 526px;
+}
+
+.search-card-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.search-card-price {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.search-card-price-text {}
+
+.favorite {
+    width: 20px;
+    height: 20px;
+    /* background-color: #101828; */
+}
+
+.search-card-details {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+    /* background-color: #101828; */
+}
+
+.search-card-rating-reviews {}
+
+.map-pin {
+    width: 20px;
+    height: 20px;
+    /* background-color: #101828; */
+}
+
+.search-card-description {}
+
+.search-card-details-list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.search-card-details-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 100px;
+    background-color: #f2f4f7;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.search-card-details-icon {
+    width: 20px;
+    height: 20px;
+    /* background-color: #101828; */
+}
+
+.search-card-details-text {}
+
+.search-card-rating-wrapper,
+.search-card-location-wrapper {
+    display: flex;
+}
+
+.search-card-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}

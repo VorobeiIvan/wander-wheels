@@ -26,7 +26,7 @@ const FilterForm = () => {
       <h2 className="filter-title">Filters</h2>
       <Checkbox values={initialValues} />
       <Radio values={initialValues} />
-      <button type="submit" className="form-button">
+      <button type="submit" className="form-button button">
         Search
       </button>
     </form>

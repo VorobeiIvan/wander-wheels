@@ -1,11 +1,10 @@
 import '../styles/index.css';
-import Icons from './Icons';
+import { LogoIcon } from './Icons';
 
-
-const Logo = (id) => {
+const Logo = () => {
   return (
     <div className="logo">
-      <Icons id={id} />
+      <LogoIcon />
       <p className="logo-text">WanderWheels</p>
     </div>
   );

@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/wanderw-wheels/static/css/main.413110f5.css",
-    "main.js": "/wanderw-wheels/static/js/main.2b1c2ae0.js",
+    "main.css": "/wanderw-wheels/static/css/main.9e10538b.css",
+    "main.js": "/wanderw-wheels/static/js/main.f1d93c2d.js",
     "static/media/Hurricane-Regular.ttf": "/wanderw-wheels/static/media/Hurricane-Regular.bc97d740476920edb2d0.ttf",
     "index.html": "/wanderw-wheels/index.html",
-    "main.413110f5.css.map": "/wanderw-wheels/static/css/main.413110f5.css.map",
-    "main.2b1c2ae0.js.map": "/wanderw-wheels/static/js/main.2b1c2ae0.js.map"
+    "main.9e10538b.css.map": "/wanderw-wheels/static/css/main.9e10538b.css.map",
+    "main.f1d93c2d.js.map": "/wanderw-wheels/static/js/main.f1d93c2d.js.map"
   },
   "entrypoints": [
-    "static/css/main.413110f5.css",
-    "static/js/main.2b1c2ae0.js"
+    "static/css/main.9e10538b.css",
+    "static/js/main.f1d93c2d.js"
   ]
 }

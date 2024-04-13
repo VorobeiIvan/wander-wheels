@@ -1,4 +1,4 @@
-import { MapPinIcon } from './Icons';
+import { MapPinIcon } from '../Icons';
 
 const Input = () => {
   return (

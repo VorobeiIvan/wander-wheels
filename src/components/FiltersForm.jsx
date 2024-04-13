@@ -1,34 +1,31 @@
-import Checkbox from './Checkbox';
-import Input from './Input';
-import Radio from './Radio';
+import Button from './Button';
+import CheckboxList from './CheckboxList';
+import LocationInput from './LocationInput';
+import RadioList from './RadioList';
 
 const FilterForm = () => {
-  const initialValues = {
-    location: '',
-    ac: false,
-    automatic: false,
-    kitchen: false,
-    tv: false,
-    'shower-wc': false,
-    radio: '',
+  const handleSubmit = event => {
+    if (event) {
+      event.preventDefault();
+      console.log('Form submitted');
+    }
   };
-
-  const handleSubmit = (values, { setSubmitting }) => {
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
-      setSubmitting(false);
-    }, 400);
-  };
-
+  const checkboxOptions = [
+    { name: 'ac', label: 'AC' },
+    { name: 'automatic', label: 'Automatic' },
+    { name: 'kitchen', label: 'Kitchen' },
+    { name: 'tv', label: 'TV' },
+    { name: 'shower-wc', label: 'Shower/WC' },
+  ];
   return (
     <form onSubmit={handleSubmit} className="filter-form">
-      <Input />
+      <LocationInput />
       <h2 className="filter-title">Filters</h2>
-      <Checkbox values={initialValues} />
-      <Radio values={initialValues} />
-      <button type="submit" className="form-button button">
-        Search
-      </button>
+      <CheckboxList checkboxArr={checkboxOptions} />
+      <RadioList
+        values={{ van: true, 'fully-integrated': true, alcove: true }}
+      />
+      <Button text={'Search'} type={'submit'} onClick={handleSubmit} />
     </form>
   );
 };

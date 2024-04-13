@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/wanderw-wheels/static/css/main.b5795676.css",
-    "main.js": "/wanderw-wheels/static/js/main.6707a80b.js",
+    "main.css": "/wanderw-wheels/static/css/main.d842054e.css",
+    "main.js": "/wanderw-wheels/static/js/main.8baaa9bf.js",
     "static/media/Hurricane-Regular.ttf": "/wanderw-wheels/static/media/Hurricane-Regular.bc97d740476920edb2d0.ttf",
+    "static/media/Inter-Black.ttf": "/wanderw-wheels/static/media/Inter-Black.83d81b169bedf85385f2.ttf",
+    "static/media/Inter-Bold.ttf": "/wanderw-wheels/static/media/Inter-Bold.0eaf807b1cf0eceabe0f.ttf",
+    "static/media/Inter-SemiBold.ttf": "/wanderw-wheels/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
+    "static/media/Inter-Medium.ttf": "/wanderw-wheels/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
+    "static/media/Inter-Regular.ttf": "/wanderw-wheels/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
     "static/media/hero.webp": "/wanderw-wheels/static/media/hero.a0be99f9e87baadefc66.webp",
     "index.html": "/wanderw-wheels/index.html",
-    "main.b5795676.css.map": "/wanderw-wheels/static/css/main.b5795676.css.map",
-    "main.6707a80b.js.map": "/wanderw-wheels/static/js/main.6707a80b.js.map"
+    "main.d842054e.css.map": "/wanderw-wheels/static/css/main.d842054e.css.map",
+    "main.8baaa9bf.js.map": "/wanderw-wheels/static/js/main.8baaa9bf.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5795676.css",
-    "static/js/main.6707a80b.js"
+    "static/css/main.d842054e.css",
+    "static/js/main.8baaa9bf.js"
   ]
 }

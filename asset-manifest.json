@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/wanderw-wheels/static/css/main.b5795676.css",
-    "main.js": "/wanderw-wheels/static/js/main.c54ec602.js",
+    "main.js": "/wanderw-wheels/static/js/main.6707a80b.js",
     "static/media/Hurricane-Regular.ttf": "/wanderw-wheels/static/media/Hurricane-Regular.bc97d740476920edb2d0.ttf",
     "static/media/hero.webp": "/wanderw-wheels/static/media/hero.a0be99f9e87baadefc66.webp",
     "index.html": "/wanderw-wheels/index.html",
     "main.b5795676.css.map": "/wanderw-wheels/static/css/main.b5795676.css.map",
-    "main.c54ec602.js.map": "/wanderw-wheels/static/js/main.c54ec602.js.map"
+    "main.6707a80b.js.map": "/wanderw-wheels/static/js/main.6707a80b.js.map"
   },
   "entrypoints": [
     "static/css/main.b5795676.css",
-    "static/js/main.c54ec602.js"
+    "static/js/main.6707a80b.js"
   ]
 }

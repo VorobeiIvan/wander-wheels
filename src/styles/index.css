@@ -1,25 +1,28 @@
 @import '~normalize.css';
-@import './utils/reset.css';
 @import './fonts/fonts-hurricane.css';
-@import './fonts/fonts-hurricane.css';
-@import './utils/variables.css';
+@import './fonts/fonts-inter.css';
 @import './utils/container.css';
-@import './components/Logo.css';
-@import './components/Navigation.css';
-@import './components/Header.css';
-@import './components/Contacts.css';
-@import './components/Footer.css';
-@import './components/SocialMedia.css';
-@import './pages/HomePage.css';
-@import './components/BookingForm.css';
-@import './components/Checkbox.css';
+@import './utils/reset.css';
+@import './utils/variables.css';
 @import './pages/CatalogPage.css';
 @import './pages/FavoritesPage.css';
-@import './components/Input.css';
-@import './components/Radio.css';
-@import './components/FiltersForm.css';
-@import './components/Card.css';
+@import './pages/HomePage.css';
+@import './components/BookingForm.css';
 @import './components/Button.css';
+@import './components/Card.css';
+@import './components/Checkbox.css';
+@import './components/Contacts.css';
+@import './components/Details.css';
+/* @import './components/Features.css'; */
+@import './components/FiltersForm.css';
+@import './components/Footer.css';
+@import './components/Header.css';
+@import './components/Input.css';
+@import './components/Logo.css';
+@import './components/Navigation.css';
+@import './components/Radio.css';
+/* @import './components/Reviews.css'; */
+@import './components/SocialMedia.css';
 
 body {
   font-family: 'Inter', sans-serif;

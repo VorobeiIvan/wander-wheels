@@ -1,3 +1,7 @@
+import Button from './Button';
+import Details from './Details';
+import { HeartIcon, MapPinIcon, StarIcon } from './Icons';
+
 const Card = data => {
   const {
     title = 'Title',
@@ -9,7 +13,17 @@ const Card = data => {
     reviews = 0,
     description = 'Description',
     detailsIcon = {},
+    icons = {},
   } = data;
+
+  const handlerClick = () => {
+    openDetailsPopup(data);
+  };
+
+  const openDetailsPopup = data => {
+    Details.open(data);
+  };
+
   return (
     <div className="search-card-wrapper">
       <img className="search-card-image" src={image[0]} alt={title} />
@@ -18,30 +32,20 @@ const Card = data => {
           <h2 className="search-card-title">{title}</h2>
           <div className="search-card-price">
             <p className="search-card-price-text">{price}</p>
-            <input
-              type="checkbox"
-              className="favorite-checkbox visible"
-              onChange={event => event.target.checked}
-              title="Favorite"
-            />
-            <svg className="favorite">
-              <use href="/src/images/heart.svg" />
-            </svg>
+            <Button type={'button'} className="search-card-button">
+              <HeartIcon />
+            </Button>
           </div>
         </div>
         <div className="search-card-details">
           <div className="search-card-rating-wrapper">
-            <svg className="star">
-              <use href="/src/images/star.svg" />
-            </svg>
+            <StarIcon />
             <p className="search-card-rating-reviews">
               {rating}({reviews} Reviews)
             </p>
           </div>
           <div className="search-card-location-wrapper">
-            <svg className="map-pin">
-              <use href="/src/images/map-pin.svg" />
-            </svg>
+            <MapPinIcon />
             <p className="search-card-location">{location}</p>
           </div>
         </div>
@@ -49,18 +53,20 @@ const Card = data => {
         <ul className="search-card-details-list">
           {Object.entries(details).map(([key, value]) => (
             <li className="search-card-details-item" key={key}>
-              <svg className="search-card-details-icon">
-                <use href={detailsIcon[key]} />
-              </svg>
+              {icons[detailsIcon[key]]}
               <p className="search-card-details-text">
                 {key}: {value}
               </p>
             </li>
           ))}
         </ul>
-        <button type="button" className="show-more button">
+        <Button
+          type={'button'}
+          className="search-card-button"
+          onClick={handlerClick}
+        >
           Show more
-        </button>
+        </Button>
       </div>
     </div>
   );

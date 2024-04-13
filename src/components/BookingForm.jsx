@@ -18,7 +18,9 @@ const BookingForm = () => {
       <EmailInput />
       <DateInput />
       <TextareaInput />
-      <Button text={'Send'} type={'submit'} onClick={handleSubmit} />
+      <Button type={'submit'} onClick={handleSubmit}>
+        Send
+      </Button>
     </form>
   );
 };

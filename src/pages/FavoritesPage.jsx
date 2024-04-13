@@ -1,4 +1,4 @@
-import { Card } from 'components';
+import { Button, Card } from 'components';
 
 const FavoritesPage = () => {
   const cards = [
@@ -21,9 +21,9 @@ const FavoritesPage = () => {
         {cards.map(item => (
           <Card key={item.id} {...item} />
         ))}
-        <button type="button" className="show-more button">
+        <Button type={'button'} className={'load-more-button'}>
           Load more
-        </button>
+        </Button>
       </section>
     </main>
   );

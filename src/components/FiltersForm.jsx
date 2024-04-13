@@ -25,7 +25,9 @@ const FilterForm = () => {
       <RadioList
         values={{ van: true, 'fully-integrated': true, alcove: true }}
       />
-      <Button text={'Search'} type={'submit'} onClick={handleSubmit} />
+      <Button type={'submit'} onClick={handleSubmit} className="lo-button">
+        Search
+      </Button>
     </form>
   );
 };

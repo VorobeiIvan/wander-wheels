@@ -24,3 +24,42 @@
         background-color: var(--accent-color-hover);
     }
 }
+
+.button.load-more-button {
+    display: inline-flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 200px;
+    border: 1px solid rgba(71, 84, 103, 0.20);
+    color: var(--Main, #101828);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: -0.08px;
+    background-color: var(--input);
+
+    &:hover,
+    &:focus {
+
+        border: 1px solid var(--Button, #E44848);
+    }
+}
+
+
+.button.button-favorite {
+    margin: 0;
+    padding: 0;
+
+    border-radius: none;
+    border: none;
+    color: var(--Main, #101828);
+
+    background-color: var(--input);
+
+
+}

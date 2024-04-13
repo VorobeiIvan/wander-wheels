@@ -9,7 +9,7 @@ const EmailInput = () => {
 
   return (
     <input
-      className="booking-form-input"
+      className="input booking-form-input"
       type="text"
       placeholder="Email"
       required

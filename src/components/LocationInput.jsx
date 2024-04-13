@@ -17,6 +17,7 @@ const LocationInput = () => {
           className="input"
           type="text"
           id="locationInput"
+          placeholder="City"
           value={location}
           onChange={handleLocationChange}
         />

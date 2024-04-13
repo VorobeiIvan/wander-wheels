@@ -9,7 +9,7 @@ const TextareaInput = () => {
 
   return (
     <textarea
-      className="booking-form-input booking-form-textarea"
+      className="input booking-form-textarea"
       name="comment"
       placeholder="Comment"
       title="Enter your comment"

@@ -32,7 +32,7 @@ const Card = data => {
           <h2 className="search-card-title">{title}</h2>
           <div className="search-card-price">
             <p className="search-card-price-text">{price}</p>
-            <Button type={'button'} className="search-card-button">
+            <Button className={'button-favorite'}>
               <HeartIcon />
             </Button>
           </div>

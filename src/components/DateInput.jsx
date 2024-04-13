@@ -10,7 +10,7 @@ const DateInput = () => {
   return (
     <input
       type="date"
-      className="booking-form-input"
+      className="input "
       placeholder="Booking date"
       required
       title="Enter booking date (2025-01-01)"

@@ -25,7 +25,10 @@ const App = () => {
             path="catalog"
             element={<CatalogPage openDetails={openDetails} />}
           />
-          <Route path="favorites" element={<FavoritesPage />} />
+          <Route
+            path="favorites"
+            element={<FavoritesPage openDetails={openDetails} />}
+          />
         </Route>
         <Route
           path="details"

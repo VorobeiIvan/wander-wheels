@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchCampers } from 'utils/api/api';
+
 import Button from './Button';
 import Details from './Details';
 import {
@@ -25,10 +26,18 @@ import {
 const Card = ({ data, index }) => {
   const [campersData, setCampersData] = useState(null);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-  const [isFavorite, setIsFavorite] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(
+    localStorage.getItem(`favorite_${data.id}`)
+  );
 
   const handleFavoriteClick = () => {
-    setIsFavorite(!isFavorite);
+    if (isFavorite) {
+      localStorage.removeItem(`favorite_${data.id}`);
+      setIsFavorite(false);
+    } else {
+      localStorage.setItem(`favorite_${data.id}`, true);
+      setIsFavorite(true);
+    }
   };
 
   useEffect(() => {

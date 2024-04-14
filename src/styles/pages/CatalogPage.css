@@ -10,3 +10,20 @@
   flex-direction: column;
   align-items: center;
 }
+
+.catalog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.load-more-button {
+  margin-top: 50px;
+}
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}

@@ -22,9 +22,8 @@ import {
   WaterIcon,
 } from './Icons';
 
-const Card = ({ data }) => {
+const Card = ({ data, index }) => {
   const [campersData, setCampersData] = useState(null);
-  const [index, setIndex] = useState(0);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -92,7 +91,7 @@ const Card = ({ data }) => {
         <>
           <img
             className="card-image"
-            src={campersData[index].gallery[index]}
+            src={campersData[index].gallery[0]}
             alt={campersData[index].name}
           />
           <div className="card-info">

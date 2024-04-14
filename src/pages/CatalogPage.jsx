@@ -20,7 +20,7 @@ const CatalogPage = () => {
         <ul className="catalog-list">
           {initialCards.slice(0, visibleCards).map((card, index) => (
             <li className="catalog-item" key={index}>
-              <Card data={card} />
+              <Card data={card} index={index} />
             </li>
           ))}
         </ul>

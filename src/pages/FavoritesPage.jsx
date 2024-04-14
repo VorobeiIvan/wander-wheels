@@ -1,29 +1,29 @@
+import React, { useState } from 'react';
 import { Button, Card } from 'components';
 
 const FavoritesPage = () => {
-  const cards = [
-    {
-      id: 1,
-      title: 'Title',
-      image: ['https://place-hold.it/300x300', 'https://place-hold.it/300x300'],
-      details: {},
-      price: 0,
-      location: 'Location',
-      rating: 0,
-      reviews: 0,
-      description: 'Description',
-      detailsIcon: {},
-    },
-  ];
+  const [visibleCards, setVisibleCards] = useState(4);
+  const [initialCards, setInitialCards] = useState([...Array(6).keys()]);
+
+  const handleLoadMore = () => {
+    setVisibleCards(prevVisibleCards => prevVisibleCards + 4);
+  };
+
   return (
     <main className="favorites-page">
       <section className="favorites-card">
-        {cards.map(item => (
+        {initialCards.slice(0, visibleCards).map(item => (
           <Card key={item.id} {...item} />
         ))}
-        <Button type={'button'} className={'load-more-button'}>
-          Load more
-        </Button>
+        {visibleCards < initialCards.length && (
+          <Button
+            type={'button'}
+            className={'load-more-button'}
+            onClick={handleLoadMore}
+          >
+            Load more
+          </Button>
+        )}
       </section>
     </main>
   );

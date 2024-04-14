@@ -1,6 +1,7 @@
 const ToiletIcon = () => {
   return (
     <svg
+      className="icon-details"
       width="20"
       height="20"
       viewBox="0 0 20 20"

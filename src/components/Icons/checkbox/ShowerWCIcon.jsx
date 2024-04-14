@@ -1,7 +1,7 @@
 const ShowerWCIcon = () => {
   return (
     <svg
-      className="checkbox-icon"
+      className="checkbox-icon icon-details"
       width="32"
       height="33"
       viewBox="0 0 32 33"

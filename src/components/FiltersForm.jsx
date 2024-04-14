@@ -1,12 +1,5 @@
 import Button from './Button';
 import CheckboxList from './CheckboxList';
-import {
-  ACIcon,
-  AutomaticIcon,
-  KitchenIcon,
-  ShowerWCIcon,
-  TVIcon,
-} from './Icons';
 import LocationInput from './LocationInput';
 import RadioList from './RadioList';
 

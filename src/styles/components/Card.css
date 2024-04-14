@@ -1,107 +1,160 @@
-.section-search-card {
+.card-wrapper {
     display: flex;
-    flex-direction: column;
+    padding: 24px;
     gap: 24px;
+    border-radius: 20px;
+    border: 1px solid rgba(16, 24, 40, 0.20);
+    background: #FFF;
     color: #101828;
 }
 
-.search-card-wrapper {
-    padding: 24px;
-    display: flex;
-    gap: 16px;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 20px;
-    border: 1px solid rgba(16, 24, 40, 0.2);
+.card-location-wrapper>.input-icon {
+    width: 20px;
+    height: 20px;
+    stroke: #101828;
 }
 
-.search-card-image {
+.card-image {
     width: 290px;
     height: 310px;
-    /* background-color: #101828; */
+    border-radius: 10px;
 }
 
-.search-card-info {
+.card-info {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    width: 526px;
 }
 
-.search-card-title {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 30px;
-}
-
-.search-card-price {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.search-card-price-text {}
-
-.favorite {
-    width: 20px;
-    height: 20px;
-    /* background-color: #101828; */
-}
-
-.search-card-details {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.star {
-    width: 20px;
-    height: 20px;
-    /* background-color: #101828; */
-}
-
-.search-card-rating-reviews {}
-
-.map-pin {
-    width: 20px;
-    height: 20px;
-    /* background-color: #101828; */
-}
-
-.search-card-description {}
-
-.search-card-details-list {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    list-style: none;
-}
-
-.search-card-details-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 18px;
-    border-radius: 100px;
-    background-color: #f2f4f7;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.search-card-details-icon {
-    width: 20px;
-    height: 20px;
-    /* background-color: #101828; */
-}
-
-.search-card-details-text {}
-
-.search-card-rating-wrapper,
-.search-card-location-wrapper {
-    display: flex;
-}
-
-.search-card-header-wrapper {
+.card-header-wrapper {
     display: flex;
     justify-content: space-between;
 }
+
+.card-title {
+    color: #101828;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    /* 125% */
+}
+
+.card-price {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-price-text {
+    color: #101828;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    /* 125% */
+}
+
+.button-favorite {}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-rating-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-rating-reviews {
+    color: #101828;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    text-decoration-line: underline;
+}
+
+.card-location-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-location {}
+
+.card-description {
+    display: -webkit-box;
+    width: 525px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+
+    overflow: hidden;
+    color: #475467;
+    text-overflow: ellipsis;
+
+    /* Main text */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; */
+}
+
+.card-details-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    color: #101828;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 125% */
+}
+
+.card-details-item {
+    display: flex;
+    padding: 12px 18px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    background: var(--Gray-100, #F2F4F7);
+    mix-blend-mode: multiply;
+}
+
+.card-details-text {
+    color: #101828;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 125% */
+}
+
+.card-details-item>.icon-details {
+    width: 20px;
+    height: 20px;
+}
+
+.card-button {}

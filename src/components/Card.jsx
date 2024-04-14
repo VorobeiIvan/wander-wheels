@@ -26,6 +26,11 @@ const Card = ({ data }) => {
   const [campersData, setCampersData] = useState(null);
   const [index, setIndex] = useState(0);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const handleFavoriteClick = () => {
+    setIsFavorite(!isFavorite);
+  };
 
   useEffect(() => {
     const fetchCampersData = async () => {
@@ -79,6 +84,7 @@ const Card = ({ data }) => {
     gas: <GasIcon />,
     water: <WaterIcon />,
   };
+  const exceptions = ['adults', 'Air conditione', 'hob', 'beds'];
 
   return (
     <div className="card-wrapper">
@@ -94,8 +100,15 @@ const Card = ({ data }) => {
               <h2 className="card-title">{campersData[index].name}</h2>
               <div className="card-price">
                 <p className="card-price-text">€{campersData[index].price}</p>
-                <Button className={'button-favorite'}>
-                  <HeartIcon />
+                <Button
+                  className={'button-favorite'}
+                  onClick={handleFavoriteClick}
+                >
+                  <HeartIcon
+                    className={isFavorite ? 'heart-icon-active' : 'heart-icon'}
+                    fill={isFavorite ? '#F43F5E' : 'transparent'}
+                    stroke={isFavorite ? '#F43F5E' : '#101828'}
+                  />
                 </Button>
               </div>
             </div>
@@ -119,7 +132,11 @@ const Card = ({ data }) => {
                   <li className="card-details-item" key={index}>
                     {icons[key]}
                     <p className="card-details-text">
-                      {key}: {value}
+                      {exceptions.includes(key)
+                        ? `${value} ${key}`
+                        : value <= 1
+                        ? key.charAt(0).toUpperCase() + key.slice(1)
+                        : key}
                     </p>
                   </li>
                 )

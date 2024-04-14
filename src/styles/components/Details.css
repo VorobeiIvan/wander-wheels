@@ -29,6 +29,7 @@
 .close-btn-icon {
     width: 32px;
     height: 32px;
+
 }
 
 .details-close-button {
@@ -39,7 +40,15 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
+
+    &:hover,
+    :focus {
+        background-color: transparent;
+        border: 3px solid rgba(16, 24, 40, 0.1);
+    }
 }
+
+
 
 body.modal-open {
     overflow: hidden;

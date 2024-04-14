@@ -51,15 +51,11 @@
 }
 
 
-.button.button-favorite {
+.button-favorite.button {
     margin: 0;
     padding: 0;
-
     border-radius: none;
     border: none;
     color: var(--Main, #101828);
-
     background-color: var(--input);
-
-
 }

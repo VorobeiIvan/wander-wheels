@@ -1,6 +1,7 @@
 const TVIcon = () => {
   return (
     <svg
+      className="checkbox-icon"
       width="26"
       height="31"
       viewBox="0 0 26 31"

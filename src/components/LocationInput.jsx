@@ -9,12 +9,12 @@ const LocationInput = () => {
   };
 
   return (
-    <div>
+    <div className="input-wrapper">
       <MapPinIcon />
       <label className="input-label">
         Enter your location:
         <input
-          className="input"
+          className="input-location input"
           type="text"
           id="locationInput"
           placeholder="City"

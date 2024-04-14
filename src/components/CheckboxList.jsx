@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import CheckboxInput from './CheckboxInput';
+import {
+  ACIcon,
+  AutomaticIcon,
+  KitchenIcon,
+  ShowerWCIcon,
+  TVIcon,
+} from './Icons';
 
-const CheckboxList = ({ checkboxArr }) => {
+const CheckboxList = () => {
   const [checkboxStates, setCheckboxStates] = useState({});
 
   const handleCheckboxChange = name => {
@@ -10,13 +17,19 @@ const CheckboxList = ({ checkboxArr }) => {
       [name]: !prevState[name],
     }));
   };
-
+  const checkboxOptions = [
+    { name: 'ac', label: 'AC', icon: <ACIcon /> },
+    { name: 'automatic', label: 'Automatic', icon: <AutomaticIcon /> },
+    { name: 'kitchen', label: 'Kitchen', icon: <KitchenIcon /> },
+    { name: 'tv', label: 'TV', icon: <TVIcon /> },
+    { name: 'shower-wc', label: 'Shower/WC', icon: <ShowerWCIcon /> },
+  ];
   return (
-    <div className="checkbox-wrapper">
+    <div className="checkbox-container">
       <h2 className="checkbox-title">Vehicle equipment</h2>
       <hr className="hr" />
       <ul className="checkbox-list">
-        {checkboxArr.map(option => (
+        {checkboxOptions.map(option => (
           <li
             className={`checkbox-item ${
               checkboxStates[option.name] && 'checked'

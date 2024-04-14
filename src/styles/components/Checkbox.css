@@ -1,4 +1,5 @@
 .checkbox-title {
+
   font-size: 20px;
   font-weight: 600;
 }
@@ -12,26 +13,40 @@
 .checkbox-item {
   border-radius: 10px;
   border: 1px solid rgba(16, 24, 40, 0.2);
+  width: 112px;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
 }
 
 .checkbox-label {
+  position: relative;
   text-align: center;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
   flex-direction: column;
-  width: 112px;
-  height: 95px;
   font-size: 16px;
   font-weight: 500;
+
 }
 
 
 .checkbox {}
 
 .checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-container {
+
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -41,8 +56,20 @@
   width: 100%;
   height: 1px;
   background-color: rgba(16, 24, 40, 0.1);
+  border: none;
 }
 
 .checked {
   border: 1px solid var(--accent-color);
+}
+
+.checkbox-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.visible {
+  position: absolute;
+  visibility: hidden;
+
 }

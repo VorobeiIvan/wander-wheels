@@ -1,73 +1,85 @@
+import { useState, useEffect } from 'react';
+import { fetchCampers } from 'utils/api/api';
 import Button from './Button';
 import Details from './Details';
 import { HeartIcon, MapPinIcon, StarIcon } from './Icons';
 
-const Card = data => {
-  const {
-    title = 'Title',
-    image = ['https://place-hold.it/300x300', 'https://place-hold.it/300x300'],
-    details = {},
-    price = 0,
-    location = 'Location',
-    rating = 0,
-    reviews = 0,
-    description = 'Description',
-    detailsIcon = {},
-    icons = {},
-  } = data;
+const Card = () => {
+  const [campersData, setCampersData] = useState(null);
 
-  const handlerClick = () => {
-    openDetailsPopup(data);
+  useEffect(() => {
+    const fetchCampersData = async () => {
+      const data = await fetchCampers();
+      setCampersData(data);
+    };
+    fetchCampersData();
+  }, []);
+
+  const handleClick = () => {
+    if (campersData) {
+      openDetailsPopup(campersData);
+    }
   };
 
   const openDetailsPopup = data => {
+    // Assuming Details component has a method like open
     Details.open(data);
   };
 
   return (
-    <div className="search-card-wrapper">
-      <img className="search-card-image" src={image[0]} alt={title} />
-      <div className="search-card-info">
-        <div className="search-card-header-wrapper">
-          <h2 className="search-card-title">{title}</h2>
-          <div className="search-card-price">
-            <p className="search-card-price-text">{price}</p>
-            <Button className={'button-favorite'}>
-              <HeartIcon />
+    <div className="card-wrapper">
+      {campersData && (
+        <>
+          <img
+            className="card-image"
+            src={campersData[0].gallery[0]}
+            alt={campersData[0].name}
+          />
+          <div className="card-info">
+            <div className="card-header-wrapper">
+              <h2 className="card-title">{campersData[0].name}</h2>
+              <div className="card-price">
+                <p className="card-price-text">{campersData[0].price}</p>
+                <Button className={'button-favorite'}>
+                  <HeartIcon />
+                </Button>
+              </div>
+            </div>
+            <div className="card-details">
+              <div className="card-rating-wrapper">
+                <StarIcon />
+                <p className="card-rating-reviews">
+                  {campersData[0].rating}({campersData[0].reviews.length}{' '}
+                  Reviews)
+                </p>
+              </div>
+              <div className="card-location-wrapper">
+                <MapPinIcon />
+                <p className="card-location">{campersData[0].location}</p>
+              </div>
+            </div>
+            <p className="card-description">{campersData[0].description}</p>
+            <ul className="card-details-list">
+              {Object.entries(campersData[0].details).map(
+                ([key, value], index) => (
+                  <li className="card-details-item" key={index}>
+                    <p className="card-details-text">
+                      {key}: {value}
+                    </p>
+                  </li>
+                )
+              )}
+            </ul>
+            <Button
+              type={'button'}
+              className="card-button"
+              onClick={handleClick}
+            >
+              Show more
             </Button>
           </div>
-        </div>
-        <div className="search-card-details">
-          <div className="search-card-rating-wrapper">
-            <StarIcon />
-            <p className="search-card-rating-reviews">
-              {rating}({reviews} Reviews)
-            </p>
-          </div>
-          <div className="search-card-location-wrapper">
-            <MapPinIcon />
-            <p className="search-card-location">{location}</p>
-          </div>
-        </div>
-        <p className="search-card-description">{description}</p>
-        <ul className="search-card-details-list">
-          {Object.entries(details).map(([key, value]) => (
-            <li className="search-card-details-item" key={key}>
-              {icons[detailsIcon[key]]}
-              <p className="search-card-details-text">
-                {key}: {value}
-              </p>
-            </li>
-          ))}
-        </ul>
-        <Button
-          type={'button'}
-          className="search-card-button"
-          onClick={handlerClick}
-        >
-          Show more
-        </Button>
-      </div>
+        </>
+      )}
     </div>
   );
 };

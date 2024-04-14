@@ -1,5 +1,4 @@
 import { createPortal } from 'react-dom';
-import React, { useState } from 'react';
 import { CloseBtnIcon, MapPinIcon, StarIcon } from './Icons';
 import Button from './Button';
 import { NavLink } from 'react-router-dom';
@@ -48,40 +47,33 @@ const Details = ({
 
           <p className="details-card-price-text">€{campersData[index].price}</p>
 
-          <ul className="details-card-images-list">
-            <li className="details-card-item">
-              <img
-                className="details-card-image"
-                src={campersData[index].gallery[0]}
-                alt={campersData[index].name}
-              />
-            </li>
-            <li className="details-card-item">
-              <img
-                className="details-card-image"
-                src={campersData[index].gallery[1]}
-                alt={campersData[index].name}
-              />
-            </li>
-            <li className="details-card-item">
-              <img
-                className="details-card-image"
-                src={campersData[index].gallery[2]}
-                alt={campersData[index].name}
-              />
-            </li>
-          </ul>
-          <p className="details-card-description">
-            {campersData[index].description}
-          </p>
+          <div className="details-card-container">
+            <ul className="details-card-images-list">
+              {campersData[index].gallery.map((image, idx) => (
+                <li className="details-card-item" key={idx}>
+                  <img
+                    className="details-card-image"
+                    src={image}
+                    alt={campersData[index].name}
+                  />
+                </li>
+              ))}
+            </ul>
+            <p className="details-card-description">
+              {campersData[index].description}
+            </p>
+          </div>
         </div>
 
-        <NavLink className="details-card-link" to="/features">
-          Features
-        </NavLink>
-        <NavLink className="details-card-link" to="/reviews">
-          Reviews
-        </NavLink>
+        <div className="details-card-link-wrapper">
+          <NavLink className="details-card-link" to="/features">
+            Features
+          </NavLink>
+          <NavLink className="details-card-link" to="/reviews">
+            Reviews
+          </NavLink>
+        </div>
+        <hr className="details-card-hr" />
       </div>
     </div>,
     document.getElementById('popup-root')

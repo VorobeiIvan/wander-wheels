@@ -14,7 +14,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: inline-flex;
-    height: 720px;
     padding: 40px;
     flex-direction: column;
     align-items: flex-end;
@@ -73,6 +72,12 @@ body.modal-open {
 .details-card-location-wrapper {
     display: flex;
     gap: 4px;
+    align-items: center;
+
+}
+
+.details-card-location-wrapper>.input-icon {
+    stroke: #101828;
 }
 
 .details-card-rating-reviews {
@@ -136,4 +141,51 @@ body.modal-open {
     font-weight: 600;
     line-height: 24px;
     /* 120% */
+}
+
+
+.details-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.details-card-link-wrapper {
+    position: relative;
+    right: 75%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.details-card-link {
+    color: #101828;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+
+    /* 120% */
+    &:hover,
+    &:focus {
+        color: var(--accent-color-hover);
+    }
+
+}
+
+
+
+.details-card-hr {
+
+    width: 902px;
+    height: 0px;
+    flex-shrink: 0;
+    stroke-width: 1px;
+    stroke: rgba(16, 24, 40, 0.20);
 }

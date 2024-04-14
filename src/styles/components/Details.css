@@ -1,4 +1,4 @@
-.details-overlay {
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -28,7 +28,6 @@
 }
 
 .close-btn-icon {
-    position: absolute;
     width: 32px;
     height: 32px;
 }
@@ -45,4 +44,96 @@
 
 body.modal-open {
     overflow: hidden;
+}
+
+.details-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+}
+
+.details-card-title {
+    color: #101828;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    /* 125% */
+}
+
+.details-card-details {
+    display: flex;
+    gap: 16px;
+
+}
+
+.details-card-rating-wrapper,
+.details-card-location-wrapper {
+    display: flex;
+    gap: 4px;
+}
+
+.details-card-rating-reviews {
+    color: #101828;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    text-decoration-line: underline;
+}
+
+.details-card-location {
+    color: #101828;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+
+.details-card-price-text {
+    color: #101828;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    /* 125% */
+}
+
+.details-card-images-list {
+    display: flex;
+    gap: 16px;
+}
+
+.details-card-image {
+    width: 290px;
+    height: 310px;
+    border-radius: 10px;
+}
+
+.details-card-description {
+    width: 902px;
+    color: var(--Gray-600, #475467);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+
+.details-card-link {
+    color: #101828;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /* 120% */
 }

@@ -142,6 +142,9 @@ const Card = ({ data }) => {
           onClose={closeDetails}
           onClick={handleBackdropClick}
           onEscapeKeyPress={handleEscapeKeyPress}
+          onBackdropClick={handleBackdropClick}
+          campersData={campersData}
+          index={index}
         />
       )}
     </div>

@@ -1,18 +1,30 @@
-// Details.js
+import { createPortal } from 'react-dom';
 import React from 'react';
 import { CloseBtnIcon, MapPinIcon, StarIcon } from './Icons';
 import Button from './Button';
 
-const Details = ({ data, onClose }) => {
-  const { name, price, rating, reviews, location, description, details } = data;
+const Details = ({ data, onClose, onClick, onBackdropClick }) => {
+  const {
+    name = '',
+    price = 0,
+    rating = 0,
+    reviews = [],
+    location = '',
+    description = '',
+    details = [],
+  } = data;
 
   const handleClose = () => {
     onClose();
   };
 
-  return (
-    <div className="details-overlay">
-      <div className="details-card-wrapper">
+  return createPortal(
+    <div
+      className="overlay"
+      onClick={onClick}
+      onBackdropClick={onBackdropClick}
+    >
+      <div className="details-popup">
         <Button
           className="details-close-button"
           onClick={handleClose}
@@ -26,6 +38,7 @@ const Details = ({ data, onClose }) => {
             <p className="details-card-price-text">€{price}</p>
             <div className="details-card-rating-wrapper">
               <StarIcon />
+              Uncomment the line below when you have reviews
               <p className="details-card-rating-reviews">
                 {rating}({reviews.length} Reviews)
               </p>
@@ -36,27 +49,24 @@ const Details = ({ data, onClose }) => {
             </div>
           </div>
           <p className="details-card-description">{description}</p>
+
           <ul className="details-card-details-list">
             {Object.entries(details).map(([key, value], index) => (
               <li className="details-card-details-item" key={index}>
-                {value ? (
+                {value && (
                   <div>
                     <p>{key}</p>
                     <p>{value}</p>
                   </div>
-                ) : null}
+                )}
               </li>
             ))}
           </ul>
         </div>
       </div>
-    </div>
+    </div>,
+    document.getElementById('popup-root')
   );
-};
-
-Details.open = data => {
-  // Code to open the Details popup with the given data
-  console.log('Opening Details:', data);
 };
 
 export default Details;

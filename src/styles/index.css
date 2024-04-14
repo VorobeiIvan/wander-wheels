@@ -12,8 +12,8 @@
 @import './components/Card.css';
 @import './components/Checkbox.css';
 @import './components/Contacts.css';
-/* @import './components/Details.css'; */
-/* @import './components/Features.css'; */
+@import './components/Details.css';
+@import './components/Features.css';
 @import './components/FiltersForm.css';
 @import './components/Footer.css';
 @import './components/Header.css';
@@ -21,8 +21,9 @@
 @import './components/Logo.css';
 @import './components/Navigation.css';
 @import './components/Radio.css';
-/* @import './components/Reviews.css'; */
+@import './components/Reviews.css';
 @import './components/SocialMedia.css';
+
 
 body {
   font-family: 'Inter', sans-serif;

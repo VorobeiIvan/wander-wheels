@@ -22,9 +22,10 @@ import {
   WaterIcon,
 } from './Icons';
 
-const Card = () => {
+const Card = ({ data }) => {
   const [campersData, setCampersData] = useState(null);
   const [index, setIndex] = useState(0);
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 
   useEffect(() => {
     const fetchCampersData = async () => {
@@ -34,15 +35,32 @@ const Card = () => {
     fetchCampersData();
   }, []);
 
-  const handleClick = () => {
-    if (campersData) {
-      openDetailsPopup(campersData[index]);
+  const openDetails = () => {
+    setIsDetailsOpen(true);
+    document.body.classList.add('modal-open');
+  };
+
+  const closeDetails = () => {
+    setIsDetailsOpen(false);
+    document.body.classList.remove('modal-open');
+  };
+
+  const handleEscapeKeyPress = event => {
+    if (event.key === 'Escape') {
+      closeDetails();
     }
   };
 
-  const openDetailsPopup = data => {
-    // Assuming Details component has a method like open
-    Details.open(data);
+  const handleBackdropClick = event => {
+    if (event.target === event.currentTarget) {
+      closeDetails();
+    }
+  };
+
+  const handleClick = () => {
+    if (campersData) {
+      openDetails();
+    }
   };
 
   const icons = {
@@ -61,6 +79,7 @@ const Card = () => {
     gas: <GasIcon />,
     water: <WaterIcon />,
   };
+
   return (
     <div className="card-wrapper">
       {campersData && (
@@ -116,6 +135,14 @@ const Card = () => {
             </Button>
           </div>
         </>
+      )}
+      {isDetailsOpen && (
+        <Details
+          data={data}
+          onClose={closeDetails}
+          onClick={handleBackdropClick}
+          onEscapeKeyPress={handleEscapeKeyPress}
+        />
       )}
     </div>
   );

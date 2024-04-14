@@ -1,20 +1,38 @@
+// App.js
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Details, Features, Footer, Header, Reviews } from 'components';
 import '../styles/index.css';
 import { CatalogPage, FavoritesPage, HomePage } from 'pages';
 
 const App = () => {
+  const [detailsData, setDetailsData] = useState(null);
+
+  const openDetails = data => {
+    setDetailsData(data);
+  };
+
+  const closeDetails = () => {
+    setDetailsData(null);
+  };
+
   return (
     <div className="container">
       <Routes>
         <Route path="/" element={<Header />}>
           <Route index element={<HomePage />} />
-          <Route path="catalog" element={<CatalogPage />} />
+          <Route
+            path="catalog"
+            element={<CatalogPage openDetails={openDetails} />}
+          />
           <Route path="favorites" element={<FavoritesPage />} />
         </Route>
-        <Route path="details" element={<Details />}>
-          <Route path="features" element={<Features />} />
+        <Route
+          path="details"
+          element={<Details data={detailsData} onClose={closeDetails} />}
+        >
           <Route path="reviews" element={<Reviews />} />
+          <Route path="features" element={<Features />} />
         </Route>
       </Routes>
       <Footer />

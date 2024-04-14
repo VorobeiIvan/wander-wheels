@@ -1,9 +1,10 @@
 const CloseBtnIcon = () => {
   return (
     <svg
-      width="60"
-      height="60"
-      viewBox="0 0 60 60"
+      className="close-btn-icon"
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

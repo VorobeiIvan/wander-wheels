@@ -1,0 +1,48 @@
+.details-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 18, 19, 0.40);
+    z-index: 999;
+}
+
+.details-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    height: 720px;
+    padding: 40px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+    z-index: 999;
+    border-radius: 20px;
+    background: #FFF;
+    width: 982px;
+    height: 720px;
+
+}
+
+.close-btn-icon {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+}
+
+.details-close-button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+body.modal-open {
+    overflow: hidden;
+}

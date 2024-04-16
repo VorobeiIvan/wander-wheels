@@ -7,18 +7,11 @@ const FavoritesPage = () => {
 
   useEffect(() => {
     const fetchFavoriteCards = () => {
-      const favorites = [];
-      for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key.startsWith('favorite_')) {
-          const cardData = JSON.parse(localStorage.getItem(key));
-          favorites.push(cardData);
-        }
-      }
+      const favorites = JSON.parse(localStorage.getItem('favoriteCards')) || [];
       setFavoriteCards(favorites);
     };
     fetchFavoriteCards();
-  }, []);
+  }, [favoriteCards]);
 
   const handleLoadMore = () => {
     setVisibleCards(prevVisibleCards => prevVisibleCards + 4);

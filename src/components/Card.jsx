@@ -3,13 +3,13 @@ import { fetchCampers } from 'utils/api/api';
 
 import Button from './Button';
 import Details from './Details';
+import { HeartIcon } from './Icons';
 import {
   AirConditionerIcon,
   BedsIcon,
   CDIcon,
   FreezerIcon,
   GasIcon,
-  HeartIcon,
   HobIcon,
   KitchenIcon,
   MapPinIcon,
@@ -26,19 +26,7 @@ import {
 const Card = ({ data, index }) => {
   const [campersData, setCampersData] = useState(null);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-  const [isFavorite, setIsFavorite] = useState(
-    localStorage.getItem(`favorite_${data.id}`)
-  );
-
-  const handleFavoriteClick = () => {
-    if (isFavorite) {
-      localStorage.removeItem(`favorite_${data.id}`);
-      setIsFavorite(false);
-    } else {
-      localStorage.setItem(`favorite_${data.id}`, true);
-      setIsFavorite(true);
-    }
-  };
+  const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {
     const fetchCampersData = async () => {
@@ -47,6 +35,26 @@ const Card = ({ data, index }) => {
     };
     fetchCampersData();
   }, []);
+
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem('favoriteCards')) || [];
+    setIsFavorite(favorites.some(card => card.id === data.id));
+  }, [data.id]);
+
+  const handleFavoriteClick = () => {
+    const favorites = JSON.parse(localStorage.getItem('favoriteCards')) || [];
+    const isCardFavorite = favorites.some(card => card.id === data.id);
+
+    if (isCardFavorite) {
+      const updatedFavorites = favorites.filter(card => card.id !== data.id);
+      localStorage.setItem('favoriteCards', JSON.stringify(updatedFavorites));
+      setIsFavorite(false);
+    } else {
+      const updatedFavorites = [...favorites, data];
+      localStorage.setItem('favoriteCards', JSON.stringify(updatedFavorites));
+      setIsFavorite(true);
+    }
+  };
 
   const openDetails = () => {
     setIsDetailsOpen(true);

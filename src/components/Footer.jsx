@@ -1,10 +1,10 @@
-import Contacts from './Contacts';
-import Logo from '../Header/Logo';
-import Navigation from '../Header/Navigation';
-import SocialMedia from './SocialMedia';
 import socialMediaProps from 'utils/socialMediaProps';
 import logoProps from 'utils/logoProps';
 import navigationProps from 'utils/navigationProps';
+import Contacts from './Contacts';
+import Logo from './Logo';
+import SocialMedia from './SocialMedia';
+import Navigation from './Navigation';
 
 const Footer = () => {
   return (

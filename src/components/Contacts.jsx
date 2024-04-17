@@ -4,15 +4,15 @@ import {
   addressProps as address,
 } from 'utils/contactsProps';
 
-const Contacts = ({ title, link, linkText }) => {
+const Contacts = () => {
   return (
     <div className="contacts" id="contacts">
       <ul className="contacts-list">
-        {contacts.map(item => (
-          <li className="contacts-item">
-            <p className="contact-title">{title}:</p>
-            <Link className="contact-link" to={link}>
-              {linkText}
+        {contacts.map((item, index) => (
+          <li className="contacts-item" key={`contact-${index}`}>
+            <p className="contact-title">{item.title}:</p>
+            <Link className="contact-link" to={item.link}>
+              {item.linkText}
             </Link>
           </li>
         ))}

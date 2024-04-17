@@ -1,5 +1,4 @@
 import { BookingForm } from 'components';
-import '../styles/index.css';
 const HomePage = () => {
   return (
     <main className="home-page">

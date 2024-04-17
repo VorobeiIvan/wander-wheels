@@ -1,4 +1,5 @@
-const Logo = ({ icon, text }) => {
+const Logo = ({ logoProps }) => {
+  const { icon, text } = logoProps;
   return (
     <div className="logo">
       {icon}

@@ -11,12 +11,10 @@ const contactsProps = [
   },
 ];
 
-const addressProps = [
-  {
-    title: 'Address',
-    link: 'https://www.google.com/maps/place/123+Main+St,+Anytown,+USA',
-    linkText: '123 Main St, Anytown, USA',
-  },
-];
+const addressProps = {
+  title: 'Address',
+  link: 'https://www.google.com/maps/place/123+Main+St,+Anytown,+USA',
+  linkText: '123 Main St, Anytown, USA',
+};
 
 export { contactsProps, addressProps };

@@ -1,7 +1,7 @@
 import { createPortal } from 'react-dom';
+import { NavLink } from 'react-router-dom';
 import { CloseBtnIcon, MapPinIcon, StarIcon } from './Icons';
 import Button from './Button';
-import { NavLink } from 'react-router-dom';
 
 const Details = ({
   index,

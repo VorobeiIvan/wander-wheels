@@ -1,4 +1,4 @@
-import BookingForm from './BookingForm/BookingForm';
+import BookingForm from './BookingForm';
 
 const Features = ({
   campersData,

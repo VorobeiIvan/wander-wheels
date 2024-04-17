@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Button, Card, FiltersForm } from 'components';
+import { Button, Card } from 'components';
+import { loadMoreButtonProps } from 'utils/buttonProps';
+import FilterForm from 'components/FilterForm';
 
 const CatalogPage = () => {
   const [visibleCards, setVisibleCards] = useState(4);
-  const [initialCards, setInitialCards] = useState(
+  const [initialCards] = useState(
     [...Array(10).keys()].map(i => ({ id: i, title: `Card ${i}` }))
   );
 
@@ -14,7 +16,7 @@ const CatalogPage = () => {
   return (
     <main className="catalog-page">
       <section className="filters-form">
-        <FiltersForm />
+        <FilterForm />
       </section>
       <section className="catalog">
         <ul className="catalog-list">
@@ -25,13 +27,7 @@ const CatalogPage = () => {
           ))}
         </ul>
         {visibleCards < initialCards.length && (
-          <Button
-            type={'button'}
-            className={'load-more-button'}
-            onClick={handleLoadMore}
-          >
-            Load more
-          </Button>
+          <Button onClick={handleLoadMore} {...loadMoreButtonProps} />
         )}
       </section>
     </main>

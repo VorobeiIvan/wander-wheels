@@ -1,5 +1,4 @@
-import { LogoIcon } from '../Icons';
-
+import { LogoIcon } from 'components/Icons';
 const logoProps = {
   icon: <LogoIcon />,
   text: 'WanderWheels',

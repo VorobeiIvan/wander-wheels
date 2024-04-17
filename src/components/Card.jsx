@@ -23,7 +23,7 @@ import {
   WaterIcon,
 } from './Icons';
 
-const Card = ({ data, index }) => {
+const Card = ({ data }) => {
   const [campersData, setCampersData] = useState(null);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -101,21 +101,21 @@ const Card = ({ data, index }) => {
     water: <WaterIcon />,
   };
   const exceptions = ['adults', 'Air conditione', 'hob', 'beds'];
-
+  const { id } = data;
   return (
     <div className="card-wrapper">
       {campersData && (
         <>
           <img
             className="card-image"
-            src={campersData[index].gallery[0]}
-            alt={campersData[index].name}
+            src={campersData[id].gallery[0]}
+            alt={campersData[id].name}
           />
           <div className="card-info">
             <div className="card-header-wrapper">
-              <h2 className="card-title">{campersData[index].name}</h2>
+              <h2 className="card-title">{campersData[id].name}</h2>
               <div className="card-price">
-                <p className="card-price-text">€{campersData[index].price}</p>
+                <p className="card-price-text">€{campersData[id].price}</p>
                 <Button
                   className={'button-favorite'}
                   onClick={handleFavoriteClick}
@@ -132,20 +132,20 @@ const Card = ({ data, index }) => {
               <div className="card-rating-wrapper">
                 <StarIcon />
                 <p className="card-rating-reviews">
-                  {campersData[index].rating}(
-                  {campersData[index].reviews.length} Reviews)
+                  {campersData[id].rating}({campersData[id].reviews.length}
+                  Reviews)
                 </p>
               </div>
               <div className="card-location-wrapper">
                 <MapPinIcon />
-                <p className="card-location">{campersData[index].location}</p>
+                <p className="card-location">{campersData[id].location}</p>
               </div>
             </div>
-            <p className="card-description">{campersData[index].description}</p>
+            <p className="card-description">{campersData[id].description}</p>
             <ul className="card-details-list">
-              {Object.entries(campersData[index].details).map(
-                ([key, value], index) => (
-                  <li className="card-details-item" key={index}>
+              {Object.entries(campersData[id].details).map(
+                ([key, value], id) => (
+                  <li className="card-details-item" key={id}>
                     {icons[key]}
                     <p className="card-details-text">
                       {exceptions.includes(key)
@@ -177,7 +177,7 @@ const Card = ({ data, index }) => {
           onEscapeKeyPress={handleEscapeKeyPress}
           onBackdropClick={handleBackdropClick}
           campersData={campersData}
-          index={index}
+          index={id}
         />
       )}
     </div>

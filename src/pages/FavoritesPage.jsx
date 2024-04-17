@@ -11,7 +11,7 @@ const FavoritesPage = () => {
       setFavoriteCards(favorites);
     };
     fetchFavoriteCards();
-  }, [favoriteCards]);
+  }, []);
 
   const handleLoadMore = () => {
     setVisibleCards(prevVisibleCards => prevVisibleCards + 4);
@@ -25,7 +25,7 @@ const FavoritesPage = () => {
         ) : (
           <>
             {favoriteCards.slice(0, visibleCards).map((card, index) => (
-              <Card key={index} data={card} index={index} />
+              <Card key={card.id} data={card} />
             ))}
             {visibleCards < favoriteCards.length && (
               <Button

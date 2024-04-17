@@ -1,21 +1,22 @@
 import Contacts from './Contacts';
-import Logo from './Logo';
-import Navigation from './Navigation';
+import Logo from '../Header/Logo';
+import Navigation from '../Header/Navigation';
 import SocialMedia from './SocialMedia';
-import '../styles/index.css';
+import socialMediaProps from 'utils/socialMediaProps';
+import logoProps from 'utils/logoProps';
+import navigationProps from 'utils/navigationProps';
 
 const Footer = () => {
   return (
     <>
-      {/* <Outlet /> */}
       <footer className="footer ">
         <div className="top-footer">
           <Contacts />
           <div className="footer-logo-social">
-            <Logo />
-            <SocialMedia />
+            <Logo logoProps={logoProps} />
+            <SocialMedia socialMediaProps={socialMediaProps} />
           </div>
-          <Navigation />
+          <Navigation navigationProps={navigationProps} />
         </div>
 
         <div className="bottom-footer">

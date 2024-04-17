@@ -29,13 +29,13 @@ const App = () => {
             path="favorites"
             element={<FavoritesPage openDetails={openDetails} />}
           />
-        </Route>
-        <Route
-          path="details"
-          element={<Details data={detailsData} onClose={closeDetails} />}
-        >
-          <Route path="reviews" element={<Reviews />} />
-          <Route path="features" element={<Features />} />
+          <Route
+            path="details"
+            element={<Details data={detailsData} onClose={closeDetails} />}
+          >
+            <Route path="features" element={<Features />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
         </Route>
       </Routes>
       <Footer />

@@ -1,7 +1,7 @@
-import Button from './Button';
-import CheckboxList from './CheckboxList';
+import Button from '../Button';
+import Checkbox from './Checkbox/Checkbox';
 import LocationInput from './LocationInput';
-import RadioList from './RadioList';
+import RadioButtons from './Radio/RadioButtons';
 
 const FilterForm = () => {
   const handleSubmit = event => {
@@ -15,8 +15,8 @@ const FilterForm = () => {
     <form onSubmit={handleSubmit} className="filter-form">
       <LocationInput />
       <h2 className="filter-title">Filters</h2>
-      <CheckboxList />
-      <RadioList />
+      <Checkbox />
+      <RadioButtons />
       <Button type={'submit'} onClick={handleSubmit} className="search-button">
         Search
       </Button>

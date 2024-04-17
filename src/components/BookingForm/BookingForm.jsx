@@ -1,4 +1,4 @@
-import Button from './Button';
+import Button from '../Button';
 import DateInput from './DateInput';
 import EmailInput from './EmailInput';
 import NameInput from './NameInput';

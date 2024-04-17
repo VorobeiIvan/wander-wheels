@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPinIcon } from './Icons';
+import { MapPinIcon } from '../Icons';
 
 const LocationInput = () => {
   const [location, setLocation] = useState('');

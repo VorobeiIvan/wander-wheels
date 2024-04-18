@@ -1,3 +1,4 @@
+import Input from './Input';
 import {
   checkboxInputProps,
   radioInputProps,
@@ -5,13 +6,12 @@ import {
 } from 'utils/inputProps';
 import { filterFormButtonProps } from 'utils/buttonProps';
 import Form from './Form';
-import Input from './Input';
 import SelectionList from './SelectionList';
 
 const FilterForm = () => {
   return (
     <Form className="filter-form" buttonProps={filterFormButtonProps}>
-      <Input {...locationInputProps} />
+      <Input inputProps={locationInputProps} />
       <h2 className="booking-form-title">Filters</h2>
       <SelectionList
         title="Vehicle equipment"

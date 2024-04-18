@@ -1,15 +1,15 @@
-.checkbox-title {
+.selection-title {
+  margin-top: 32px;
   font-size: 20px;
   font-weight: 600;
 }
 
-.checkbox-list {
+.selection-list {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
 }
 
-.checkbox-item {
+.radio-item {
   border-radius: 10px;
   border: 1px solid rgba(16, 24, 40, 0.2);
   width: 112px;
@@ -21,8 +21,7 @@
   align-items: center;
 }
 
-.checkbox-label {
-  position: relative;
+.radio-label {
   text-align: center;
   cursor: pointer;
   display: flex;
@@ -31,44 +30,32 @@
   flex-direction: column;
   font-size: 16px;
   font-weight: 500;
-
 }
 
+.radio {}
 
-.checkbox {}
 
-.checkbox-wrapper {
+.radio-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
-.checkbox-container {
+
+.radio-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.radio-container {
 
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.hr {
-  width: 100%;
-  height: 1px;
-  background-color: rgba(16, 24, 40, 0.1);
-  border: none;
-}
-
 .checked {
   border: 1px solid var(--accent-color);
-}
-
-.checkbox-icon {
-  width: 32px;
-  height: 32px;
-}
-
-.visible {
-  position: absolute;
-  visibility: hidden;
-
 }

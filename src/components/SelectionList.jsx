@@ -9,10 +9,10 @@ const SelectionList = ({ title, options, type }) => {
   };
 
   return (
-    <div className="selection-container">
-      <h2 className="selection-title">{title}</h2>
+    <div className={`${type}-container `}>
+      <h2 className={`${type}-title`}>{`${title}`}</h2>
       <hr className="hr" />
-      <ul className="selection-list">
+      <ul className={`${type}-list`}>
         {options.map(option => (
           <li
             className={`${type}-item ${
@@ -22,10 +22,13 @@ const SelectionList = ({ title, options, type }) => {
             onClick={() => handleSelectionChange(option.value)}
           >
             <Input
-              icon={option.icon}
-              label={option.label}
-              value={option.value}
-              name={option.name}
+              inputProps={{
+                icon: option.icon,
+                label: option.label,
+                value: option.value,
+                name: option.name,
+                type: type,
+              }}
             />
           </li>
         ))}

@@ -1,21 +1,22 @@
 .filter-form {
-    width: 362px;
-    display: flex;
-    flex-direction: column;
-
-
+  width: 362px;
+  display: flex;
+  flex-direction: column;
 }
 
 .filter-title {
-    margin-top: 32px;
-    margin-bottom: 14px;
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--form-text-color);
-
+  margin-top: 32px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--form-text-color);
 }
 
-.search-button {
-    margin-top: 64px;
-
+.filter-button {
+  margin-top: 64px;
 }
+
+.filter-form .submit-button {
+  margin-top: 64px;
+}
+

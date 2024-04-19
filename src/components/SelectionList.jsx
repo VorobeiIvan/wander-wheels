@@ -28,6 +28,7 @@ const SelectionList = ({ title, options, type }) => {
                 value: option.value,
                 name: option.name,
                 type: type,
+                className: `${type}-input`,
               }}
             />
           </li>

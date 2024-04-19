@@ -1,6 +1,6 @@
-export const filterFormButtonProps = {
+export const FormButtonProps = {
   type: 'submit',
-  className: 'search-button',
+  className: 'submit-button',
   children: 'Search',
 };
 

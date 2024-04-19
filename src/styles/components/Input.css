@@ -8,14 +8,6 @@
   color: var(--form-text-color);
 }
 
-/* .input-icon {
-  position: absolute;
-  top: 55%;
-  left: 18px;
-  fill: transparent;
-  stroke: var(--main);
-} */
-
 .input {
   color: var(--main);
   font-size: 16px;
@@ -34,6 +26,10 @@
 
 .input-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .input-location {
@@ -43,7 +39,7 @@
   align-items: flex-start;
   gap: 10px;
   border-radius: 10px;
-  background: #F7F7F7;
+  background: #f7f7f7;
   color: #101828;
   font-family: Inter;
   font-size: 16px;
@@ -55,9 +51,39 @@
 
 .input-wrapper .input-icon {
   position: absolute;
-  top: 52px;
-  left: 24px;
+  top: 50px;
+  left: 4px;
   z-index: 2;
   fill: transparent;
   stroke: rgba(16, 24, 40, 0.6);
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox-input.input,
+.radio-input.input {
+  appearance: none;
+  width: 0;
+  padding: 0;
+}
+
+.checkbox-item .input-label,
+.radio-item .input-label {
+  color: #101828;
+  text-align: center;
+}
+
+.checkbox-item,
+.radio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  
+
+}
+.input-wrapper>svg{
+  width: 32px;
+  height: 32px;
 }

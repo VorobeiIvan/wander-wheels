@@ -58,7 +58,7 @@
   border: none;
 }
 
-.checked {
+.checked-checkbox {
   border: 1px solid var(--accent-color);
 }
 

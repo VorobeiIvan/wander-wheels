@@ -2,10 +2,24 @@ import React, { useState } from 'react';
 import Input from './Input';
 
 const SelectionList = ({ title, options, type }) => {
-  const [selectedValue, setSelectedValue] = useState('');
+  const [selectedRadio, setSelectedRadio] = useState('');
+  const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
 
-  const handleSelectionChange = value => {
-    setSelectedValue(value);
+  const handleRadioChange = value => {
+    setSelectedRadio(value);
+  };
+
+  const handleCheckboxChange = name => {
+    const updatedCheckboxes = [...selectedCheckboxes];
+
+    if (updatedCheckboxes.includes(name)) {
+      const index = updatedCheckboxes.indexOf(name);
+      updatedCheckboxes.splice(index, 1);
+    } else {
+      updatedCheckboxes.push(name);
+    }
+
+    setSelectedCheckboxes(updatedCheckboxes);
   };
 
   return (
@@ -16,10 +30,17 @@ const SelectionList = ({ title, options, type }) => {
         {options.map(option => (
           <li
             className={`${type}-item ${
-              selectedValue === option.value ? 'checked' : ''
+              (type === 'radio' && selectedRadio === option.value) ||
+              (type === 'checkbox' && selectedCheckboxes.includes(option.name))
+                ? `checked-${type}`
+                : ''
             }`}
             key={option.label}
-            onClick={() => handleSelectionChange(option.value)}
+            onClick={() =>
+              type === 'radio'
+                ? handleRadioChange(option.value)
+                : handleCheckboxChange(option.name)
+            }
           >
             <Input
               inputProps={{

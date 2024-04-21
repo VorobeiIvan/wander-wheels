@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import { CloseBtnIcon } from './Icons';
-import Button from './Button';
+import { CloseBtnIcon } from '../Icons';
+import Button from '../Forms/Button';
 import ModalCardInfo from './ModalCardInfo';
 
 const ModalContent = ({ id, campersData, onClose }) => {

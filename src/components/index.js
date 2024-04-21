@@ -1,21 +1,21 @@
 import App from './App.jsx';
-import BookingForm from './BookingForm.jsx';
-import Button from './Button.jsx';
-import Card from './Card.jsx';
-import Contacts from './Contacts.jsx';
-import Details from './Details.jsx';
+import BookingForm from './Forms/BookingForm.jsx';
+import Button from './Forms/Button.jsx';
+import Card from './Card/Card.jsx';
+import Contacts from './UIComponents/Contacts.jsx';
+import Details from './Modal/Details.jsx';
 import Features from './Features.jsx';
-import FilterForm from './FilterForm.jsx';
-import Footer from './Footer.jsx';
-import Form from './Form.jsx';
-import Header from './Header.jsx';
-import Input from './Input.jsx';
-import Logo from './Logo.jsx';
-import Navigation from './Navigation.jsx';
+import FilterForm from './Forms/FilterForm.jsx';
+import Footer from './UIComponents/Footer.jsx';
+import Form from './Forms/Form.jsx';
+import Header from './UIComponents/Header.jsx';
+import Input from './Forms/Input.jsx';
+import Logo from './UIComponents/Logo.jsx';
+import Navigation from './UIComponents/Navigation.jsx';
 import Reviews from './Reviews.jsx';
-import SelectionList from './SelectionList.jsx';
-import SocialMedia from './SocialMedia.jsx';
-import TextareaInput from './TextareaInput.jsx';
+import SelectionList from './Forms/SelectionList.jsx';
+import SocialMedia from './UIComponents/SocialMedia.jsx';
+import TextareaInput from './Forms/TextareaInput.jsx';
 
 export {
   App,
@@ -24,8 +24,8 @@ export {
   Card,
   Contacts,
   Details,
-  Features,
   FilterForm,
+  Features,
   Footer,
   Form,
   Header,

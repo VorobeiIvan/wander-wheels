@@ -32,7 +32,16 @@ const App = () => {
             path="details/:detailsId"
             element={<Details data={detailsData} onClose={closeDetails} />}
           />
-          <Route path="features" element={<Features />} />
+          <Route
+            path="features"
+            element={
+              <Features
+                id={detailsData.id}
+                campersData={detailsData.campersData}
+              />
+            }
+          />
+
           <Route path="reviews" element={<Reviews />} />
         </Route>
       </Routes>

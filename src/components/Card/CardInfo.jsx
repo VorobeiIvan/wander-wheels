@@ -1,7 +1,7 @@
 import React from 'react';
 import CardDetails from './CardDetails';
 import CardDetailsList from './CardDetailsList';
-import Button from './Button';
+import Button from '../Forms/Button';
 import FavoriteBtn from './FavoriteBtn';
 
 const CardInfo = ({

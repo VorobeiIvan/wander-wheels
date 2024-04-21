@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from './Button';
-import { HeartIcon } from './Icons';
+import Button from '../Forms/Button';
+import { HeartIcon } from '../Icons';
 
 const FavoriteBtn = ({ isFavorite, onClick }) => {
   return (

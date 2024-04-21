@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchCampers } from 'utils/api/api';
-import Details from './Details';
+import Details from '../Modal/Details';
 import CardInfo from './CardInfo';
 
 const Card = ({ data }) => {

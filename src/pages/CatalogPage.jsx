@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Card } from 'components';
 import { loadMoreButtonProps } from 'utils/buttonProps';
-import FilterForm from 'components/FilterForm';
+import FilterForm from 'components/Forms/FilterForm';
 
 const CatalogPage = () => {
   const [visibleCards, setVisibleCards] = useState(4);

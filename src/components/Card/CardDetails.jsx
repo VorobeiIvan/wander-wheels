@@ -1,4 +1,4 @@
-import { MapPinIcon, StarIcon } from './Icons';
+import { MapPinIcon, StarIcon } from '../Icons';
 
 const CardDetails = ({ rating, reviewsLength, location }) => {
   return (

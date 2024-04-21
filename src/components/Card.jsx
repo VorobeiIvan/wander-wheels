@@ -1,27 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchCampers } from 'utils/api/api';
-
-import Button from './Button';
 import Details from './Details';
-import { HeartIcon } from './Icons';
-import {
-  AirConditionerIcon,
-  BedsIcon,
-  CDIcon,
-  FreezerIcon,
-  GasIcon,
-  HobIcon,
-  KitchenIcon,
-  MapPinIcon,
-  MicrowaveIcon,
-  RadioIcon,
-  ShowerIcon,
-  ShowerWCIcon,
-  StarIcon,
-  TVIcon,
-  ToiletIcon,
-  WaterIcon,
-} from './Icons';
+import CardInfo from './CardInfo';
 
 const Card = ({ data }) => {
   const [campersData, setCampersData] = useState(null);
@@ -30,8 +10,12 @@ const Card = ({ data }) => {
 
   useEffect(() => {
     const fetchCampersData = async () => {
-      const data = await fetchCampers();
-      setCampersData(data);
+      try {
+        const data = await fetchCampers();
+        setCampersData(data);
+      } catch (error) {
+        console.error('Error fetching campers:', error);
+      }
     };
     fetchCampersData();
   }, []);
@@ -66,42 +50,14 @@ const Card = ({ data }) => {
     document.body.classList.remove('modal-open');
   };
 
-  const handleEscapeKeyPress = event => {
-    if (event.key === 'Escape') {
-      closeDetails();
-    }
-  };
-
-  const handleBackdropClick = event => {
-    if (event.target === event.currentTarget) {
-      closeDetails();
-    }
-  };
-
   const handleClick = () => {
     if (campersData) {
       openDetails();
     }
   };
 
-  const icons = {
-    airConditioner: <AirConditionerIcon />,
-    bathroom: <ShowerWCIcon />,
-    kitchen: <KitchenIcon />,
-    beds: <BedsIcon />,
-    TV: <TVIcon />,
-    CD: <CDIcon />,
-    radio: <RadioIcon />,
-    shower: <ShowerIcon />,
-    toilet: <ToiletIcon />,
-    freezer: <FreezerIcon />,
-    hob: <HobIcon />,
-    microwave: <MicrowaveIcon />,
-    gas: <GasIcon />,
-    water: <WaterIcon />,
-  };
-  const exceptions = ['adults', 'Air conditione', 'hob', 'beds'];
   const { id } = data;
+
   return (
     <div className="card-wrapper">
       {campersData && (
@@ -111,73 +67,21 @@ const Card = ({ data }) => {
             src={campersData[id].gallery[0]}
             alt={campersData[id].name}
           />
-          <div className="card-info">
-            <div className="card-header-wrapper">
-              <h2 className="card-title">{campersData[id].name}</h2>
-              <div className="card-price">
-                <p className="card-price-text">€{campersData[id].price}</p>
-                <Button
-                  className={'button-favorite'}
-                  onClick={handleFavoriteClick}
-                >
-                  <HeartIcon
-                    className={isFavorite ? 'heart-icon-active' : 'heart-icon'}
-                    fill={isFavorite ? '#F43F5E' : 'transparent'}
-                    stroke={isFavorite ? '#F43F5E' : '#101828'}
-                  />
-                </Button>
-              </div>
-            </div>
-            <div className="card-details">
-              <div className="card-rating-wrapper">
-                <StarIcon />
-                <p className="card-rating-reviews">
-                  {campersData[id].rating}({campersData[id].reviews.length}
-                  Reviews)
-                </p>
-              </div>
-              <div className="card-location-wrapper">
-                <MapPinIcon />
-                <p className="card-location">{campersData[id].location}</p>
-              </div>
-            </div>
-            <p className="card-description">{campersData[id].description}</p>
-            <ul className="card-details-list">
-              {Object.entries(campersData[id].details).map(
-                ([key, value], id) => (
-                  <li className="card-details-item" key={id}>
-                    {icons[key]}
-                    <p className="card-details-text">
-                      {exceptions.includes(key)
-                        ? `${value} ${key}`
-                        : value <= 1
-                        ? key.charAt(0).toUpperCase() + key.slice(1)
-                        : key}
-                    </p>
-                  </li>
-                )
-              )}
-            </ul>
-
-            <Button
-              type={'button'}
-              className="card-button"
-              onClick={handleClick}
-            >
-              Show more
-            </Button>
-          </div>
+          <CardInfo
+            campersData={campersData}
+            id={id}
+            isFavorite={isFavorite}
+            handleFavoriteClick={handleFavoriteClick}
+            handleClick={handleClick}
+          />
         </>
       )}
       {isDetailsOpen && (
         <Details
-          data={data}
-          onClose={closeDetails}
-          onClick={handleBackdropClick}
-          onEscapeKeyPress={handleEscapeKeyPress}
-          onBackdropClick={handleBackdropClick}
+          id={id}
           campersData={campersData}
-          index={id}
+          onClose={closeDetails}
+          onClick={handleClick}
         />
       )}
     </div>

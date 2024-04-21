@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Details, Features, Footer, Header, Reviews } from 'components';
@@ -30,12 +29,11 @@ const App = () => {
             element={<FavoritesPage openDetails={openDetails} />}
           />
           <Route
-            path="details"
+            path="details/:detailsId"
             element={<Details data={detailsData} onClose={closeDetails} />}
-          >
-            <Route path="features" element={<Features />} />
-            <Route path="reviews" element={<Reviews />} />
-          </Route>
+          />
+          <Route path="features" element={<Features />} />
+          <Route path="reviews" element={<Reviews />} />
         </Route>
       </Routes>
       <Footer />

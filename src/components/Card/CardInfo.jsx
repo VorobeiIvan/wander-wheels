@@ -16,7 +16,8 @@ const CardInfo = ({
       <div className="card-header-wrapper">
         <h2 className="card-title">{campersData[id].name}</h2>
         <div className="card-price">
-          <p className="card-price-text">€{campersData[id].price}</p>
+          <p className="card-price-text">€{campersData[id].price.toFixed(2)}</p>
+
           <FavoriteBtn isFavorite={isFavorite} onClick={handleFavoriteClick} />
         </div>
       </div>

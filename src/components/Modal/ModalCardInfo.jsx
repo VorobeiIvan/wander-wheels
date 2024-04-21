@@ -10,7 +10,7 @@ const ModalCardInfo = ({ campersData, id }) => {
         reviewsLength={campersData[id].reviews.length}
         location={campersData[id].location}
       />
-      <p className="details-card-price-text">€{campersData[id].price}</p>
+      <p className="card-price-text">€{campersData[id].price.toFixed(2)}</p>
       <div className="details-card-container">
         <ModalCardDetailsList
           gallery={campersData[id].gallery}

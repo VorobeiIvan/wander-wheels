@@ -57,15 +57,16 @@ const Card = ({ data }) => {
   };
 
   const { id } = data;
+  const details = campersData && campersData[id];
 
   return (
     <div className="card-wrapper">
-      {campersData && (
+      {details && (
         <>
           <img
             className="card-image"
-            src={campersData[id].gallery[0]}
-            alt={campersData[id].name}
+            src={details.gallery[0]}
+            alt={details.name}
           />
           <CardInfo
             campersData={campersData}
@@ -76,7 +77,7 @@ const Card = ({ data }) => {
           />
         </>
       )}
-      {isDetailsOpen && (
+      {isDetailsOpen && details && (
         <Details
           id={id}
           campersData={campersData}

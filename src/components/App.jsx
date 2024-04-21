@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Details, Features, Footer, Header, Reviews } from 'components';
-import '../styles/index.css';
+
 import { CatalogPage, FavoritesPage, HomePage } from 'pages';
 
 const App = () => {
@@ -36,8 +36,8 @@ const App = () => {
             path="features"
             element={
               <Features
-                id={detailsData.id}
-                campersData={detailsData.campersData}
+              // id={detailsData.id}
+              // campersData={detailsData.campersData}
               />
             }
           />

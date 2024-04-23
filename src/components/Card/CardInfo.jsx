@@ -1,8 +1,7 @@
-import React from 'react';
+import { Button } from 'components';
 import CardDetails from './CardDetails';
-import CardDetailsList from './CardDetailsList';
-import Button from '../Forms/Button';
 import FavoriteBtn from './FavoriteBtn';
+import CardDetailsList from './CardDetailsList';
 
 const CardInfo = ({
   campersData,

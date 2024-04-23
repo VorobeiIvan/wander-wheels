@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchCampers } from 'utils/api/api';
-import Details from '../Modal/Details';
 import CardInfo from './CardInfo';
+import { Details } from 'components';
 
 const Card = ({ data }) => {
   const [campersData, setCampersData] = useState(null);

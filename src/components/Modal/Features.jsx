@@ -1,10 +1,11 @@
-// import CardDetailsList from './Card/CardDetailsList';
-import BookingForm from './Forms/BookingForm';
+import CardDetailsList from 'components/Card/CardDetailsList';
+import BookingForm from '../Forms/BookingForm';
 
-const Features = () => {
+const Features = ({ campersData, id }) => {
+  const { form, length, width, height, tank, consumption } = campersData[id];
   return (
-    <section className="features">
-      {/* <div className="vehicle-details-wrapper">
+    <section className="features" id="features">
+      <div className="vehicle-details-wrapper">
         <CardDetailsList
           details={campersData[id].details}
           exceptions={['adults', 'Air conditione', 'hob', 'beds']}
@@ -37,7 +38,7 @@ const Features = () => {
             <p className="card-details-text">{consumption}</p>
           </li>
         </ul>
-      </div> */}
+      </div>
       <BookingForm />
     </section>
   );

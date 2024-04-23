@@ -1,4 +1,3 @@
-import React from 'react';
 import { cardDetailsIcon as icons } from 'utils/cardDetailsIcon';
 
 const CardDetailsList = ({ details, exceptions }) => {
@@ -6,9 +5,11 @@ const CardDetailsList = ({ details, exceptions }) => {
     return null;
   }
 
+  const firstSixEntries = Object.entries(details).slice(0, 6);
+
   return (
     <ul className="card-details-list">
-      {Object.entries(details).map(([key, value], id) => (
+      {firstSixEntries.map(([key, value], id) => (
         <li className="card-details-item" key={id}>
           {icons[key]}
           <p className="card-details-text">

@@ -31,19 +31,26 @@ const App = () => {
           <Route
             path="details/:detailsId"
             element={<Details data={detailsData} onClose={closeDetails} />}
-          />
-          <Route
-            path="features"
-            element={
-              <Features
-              // id={detailsData.id}
-              // campersData={detailsData.campersData}
-              />
-            }
-          />
-
-          <Route path="reviews" element={<Reviews />} />
+          >
+            {detailsData && (
+              <>
+                <Route
+                  path="features"
+                  element={
+                    <Features campersData={detailsData} id={detailsData.id} />
+                  }
+                />
+                <Route
+                  path="reviews"
+                  element={
+                    <Reviews campersData={detailsData} id={detailsData.id} />
+                  }
+                />
+              </>
+            )}
+          </Route>
         </Route>
+        {/* <Route path="*" element={<HomePage />} /> */}
       </Routes>
       <Footer />
     </div>

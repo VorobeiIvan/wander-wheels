@@ -1,4 +1,4 @@
-import CardDetails from '../Card/CardDetails';
+import CardDetails from 'components/Card/CardDetails';
 import ModalCardDetailsList from './ModalCardDetailsList';
 
 const ModalCardInfo = ({ campersData, id }) => {

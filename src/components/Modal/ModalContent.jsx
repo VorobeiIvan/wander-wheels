@@ -1,6 +1,7 @@
-import { NavLink } from 'react-router-dom';
-import { CloseBtnIcon } from '../Icons';
-import Button from '../Forms/Button';
+import React from 'react';
+import { NavLink, Outlet } from 'react-router-dom';
+import { Button } from 'components';
+import { CloseBtnIcon } from 'components/Icons';
 import ModalCardInfo from './ModalCardInfo';
 
 const ModalContent = ({ id, campersData, onClose }) => {
@@ -19,13 +20,14 @@ const ModalContent = ({ id, campersData, onClose }) => {
       </Button>
       <ModalCardInfo campersData={campersData} id={id} />
       <div className="details-card-link-wrapper">
-        <NavLink className="details-card-link" to="/features">
+        <NavLink className="details-card-link" to={`features`}>
           Features
         </NavLink>
-        <NavLink className="details-card-link" to="/reviews">
+        <NavLink className="details-card-link" to={`reviews`}>
           Reviews
         </NavLink>
       </div>
+      <Outlet />
       <hr className="details-card-hr" />
     </div>
   );

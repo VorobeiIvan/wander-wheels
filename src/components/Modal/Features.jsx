@@ -1,5 +1,5 @@
+import { BookingForm } from 'components';
 import CardDetailsList from 'components/Card/CardDetailsList';
-import BookingForm from '../Forms/BookingForm';
 
 const Features = ({ campersData, id }) => {
   const { form, length, width, height, tank, consumption } = campersData[id];

@@ -1,8 +1,8 @@
 {
-  "name": "wanderw-wheels",
+  "name": "wander-wheels",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://VorobeiIvan.github.io/wanderw-wheels/",
+  "homepage": "https://VorobeiIvan.github.io/wander-wheels/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",

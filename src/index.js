@@ -7,7 +7,7 @@ import './styles/index.css';
 const root = createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/wanderw-wheels">
+    <BrowserRouter basename="/wander-wheels">
       <App />
     </BrowserRouter>
   </React.StrictMode>

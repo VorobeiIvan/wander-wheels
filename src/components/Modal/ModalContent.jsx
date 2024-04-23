@@ -1,10 +1,10 @@
-import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useParams } from 'react-router-dom';
 import { Button } from 'components';
 import { CloseBtnIcon } from 'components/Icons';
 import ModalCardInfo from './ModalCardInfo';
 
 const ModalContent = ({ id, campersData, onClose }) => {
+  const { detailsId } = useParams();
   const handleClose = () => {
     onClose();
   };
@@ -20,10 +20,10 @@ const ModalContent = ({ id, campersData, onClose }) => {
       </Button>
       <ModalCardInfo campersData={campersData} id={id} />
       <div className="details-card-link-wrapper">
-        <NavLink className="details-card-link" to={`features`}>
+        <NavLink className="details-card-link" to={`${detailsId}/features`}>
           Features
         </NavLink>
-        <NavLink className="details-card-link" to={`reviews`}>
+        <NavLink className="details-card-link" to={`${detailsId}/reviews`}>
           Reviews
         </NavLink>
       </div>

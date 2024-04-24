@@ -7,8 +7,8 @@ const Card = ({ data }) => {
   const [campersData, setCampersData] = useState(null);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [, setLoading] = useState(false);
+  const [, setError] = useState('');
 
   useEffect(() => {
     const fetchCampersData = async () => {

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/wander-wheels/static/css/main.fadae065.css",
-    "main.js": "/wander-wheels/static/js/main.56359232.js",
+    "main.css": "/wander-wheels/static/css/main.5288cc71.css",
+    "main.js": "/wander-wheels/static/js/main.eaa60c15.js",
     "static/media/Hurricane-Regular.ttf": "/wander-wheels/static/media/Hurricane-Regular.bc97d740476920edb2d0.ttf",
     "static/media/Inter-Black.ttf": "/wander-wheels/static/media/Inter-Black.83d81b169bedf85385f2.ttf",
     "static/media/Inter-Bold.ttf": "/wander-wheels/static/media/Inter-Bold.0eaf807b1cf0eceabe0f.ttf",
@@ -10,11 +10,11 @@
     "static/media/Inter-Regular.ttf": "/wander-wheels/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
     "static/media/hero.webp": "/wander-wheels/static/media/hero.a0be99f9e87baadefc66.webp",
     "index.html": "/wander-wheels/index.html",
-    "main.fadae065.css.map": "/wander-wheels/static/css/main.fadae065.css.map",
-    "main.56359232.js.map": "/wander-wheels/static/js/main.56359232.js.map"
+    "main.5288cc71.css.map": "/wander-wheels/static/css/main.5288cc71.css.map",
+    "main.eaa60c15.js.map": "/wander-wheels/static/js/main.eaa60c15.js.map"
   },
   "entrypoints": [
-    "static/css/main.fadae065.css",
-    "static/js/main.56359232.js"
+    "static/css/main.5288cc71.css",
+    "static/js/main.eaa60c15.js"
   ]
 }

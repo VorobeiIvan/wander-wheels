@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/wander-wheels/static/css/main.0bcdbd9d.css",
+    "main.css": "/wander-wheels/static/css/main.6372bed5.css",
     "main.js": "/wander-wheels/static/js/main.eaa60c15.js",
     "static/media/Hurricane-Regular.ttf": "/wander-wheels/static/media/Hurricane-Regular.bc97d740476920edb2d0.ttf",
     "static/media/Inter-Black.ttf": "/wander-wheels/static/media/Inter-Black.83d81b169bedf85385f2.ttf",
@@ -10,11 +10,11 @@
     "static/media/Inter-Regular.ttf": "/wander-wheels/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
     "static/media/hero.webp": "/wander-wheels/static/media/hero.a0be99f9e87baadefc66.webp",
     "index.html": "/wander-wheels/index.html",
-    "main.0bcdbd9d.css.map": "/wander-wheels/static/css/main.0bcdbd9d.css.map",
+    "main.6372bed5.css.map": "/wander-wheels/static/css/main.6372bed5.css.map",
     "main.eaa60c15.js.map": "/wander-wheels/static/js/main.eaa60c15.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bcdbd9d.css",
+    "static/css/main.6372bed5.css",
     "static/js/main.eaa60c15.js"
   ]
 }

@@ -7,14 +7,20 @@ const Card = ({ data }) => {
   const [campersData, setCampersData] = useState(null);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const fetchCampersData = async () => {
       try {
+        setLoading(true);
+        setError('');
         const data = await fetchCampers();
         setCampersData(data);
       } catch (error) {
-        console.error('Error fetching campers:', error);
+        setError(error.message);
+      } finally {
+        setLoading(false);
       }
     };
     fetchCampersData();

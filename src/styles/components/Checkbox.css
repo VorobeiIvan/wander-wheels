@@ -12,7 +12,7 @@
 .checkbox-item {
   border-radius: 10px;
   border: 1px solid rgba(16, 24, 40, 0.2);
-  width: 112px;
+  width: 111px;
   height: 95px;
   display: flex;
   flex-direction: column;

@@ -2,42 +2,35 @@ import { BookingForm } from 'components';
 import CardDetailsList from 'components/Card/CardDetailsList';
 
 const Features = ({ campersData, id }) => {
-  const { form, length, width, height, tank, consumption } = campersData[id];
+  const renderDetails = () => {
+    const { form, length, width, height, tank, consumption } = campersData[id];
+    const details = [
+      { label: 'Form', value: form },
+      { label: 'Length', value: length },
+      { label: 'Width', value: width },
+      { label: 'Height', value: height },
+      { label: 'Tank', value: tank },
+      { label: 'Consumption', value: consumption },
+    ];
+
+    return details.map(({ label, value }) => (
+      <li className="features-details-item" key={label}>
+        <p className="features-details-text">{label}</p>
+        <p className="features-details-text">{value}</p>
+      </li>
+    ));
+  };
   return (
     <section className="features" id="features">
       <div className="vehicle-details-wrapper">
         <CardDetailsList
           details={campersData[id].details}
-          exceptions={['adults', 'Air conditione', 'hob', 'beds']}
+          exceptions={['adults', 'Air conditioner', 'hob', 'beds']}
+          numberOfCards={20}
         />
         <h2>Vehicle details</h2>
         <hr className="hr" />
-        <ul className="card-details-list">
-          <li className="card-details-item">
-            <p className="card-details-text">Form</p>
-            <p className="card-details-text">{form}</p>
-          </li>
-          <li className="card-details-item">
-            <p className="card-details-text">Length</p>
-            <p className="card-details-text">{length}</p>
-          </li>
-          <li className="card-details-item">
-            <p className="card-details-text">Width</p>
-            <p className="card-details-text">{width}</p>
-          </li>
-          <li className="card-details-item">
-            <p className="card-details-text">Height</p>
-            <p className="card-details-text">{height}</p>
-          </li>
-          <li className="card-details-item">
-            <p className="card-details-text">Tank</p>
-            <p className="card-details-text">{tank}</p>
-          </li>
-          <li className="card-details-item">
-            <p className="card-details-text">Consumption</p>
-            <p className="card-details-text">{consumption}</p>
-          </li>
-        </ul>
+        <ul className="features-details-list">{renderDetails()}</ul>
       </div>
       <BookingForm />
     </section>

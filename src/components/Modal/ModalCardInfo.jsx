@@ -1,7 +1,8 @@
 import CardDetails from 'components/Card/CardDetails';
 import ModalCardDetailsList from './ModalCardDetailsList';
-
 const ModalCardInfo = ({ campersData, id }) => {
+
+
   return (
     <div className="details-card-info">
       <h2 className="details-card-title">{campersData[id].name}</h2>

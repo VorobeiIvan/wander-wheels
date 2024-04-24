@@ -22,7 +22,8 @@
     border-radius: 20px;
     background: #FFF;
     width: 982px;
-    height: 720px;
+    height: 90vh;
+    overflow-y: auto;
 
 }
 
@@ -49,10 +50,6 @@
 }
 
 
-
-body.modal-open {
-    overflow: hidden;
-}
 
 .details-card-info {
     display: flex;
@@ -142,16 +139,6 @@ body.modal-open {
     /* 150% */
 }
 
-.details-card-link {
-    color: #101828;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    /* 120% */
-}
-
 
 .details-card-container {
     display: flex;
@@ -161,14 +148,16 @@ body.modal-open {
     overflow-y: auto;
 }
 
-.details-card-link-wrapper {
+.details-card-links-wrapper {
     position: relative;
     right: 75%;
     margin-top: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-start;
     gap: 40px;
+
+
 
 }
 
@@ -179,22 +168,33 @@ body.modal-open {
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
 
-    /* 120% */
     &:hover,
     &:focus {
         color: var(--accent-color-hover);
+        background-color: transparent;
+        border: none;
+    }
+
+    &.active ::after {
+        margin-top: 24px;
+        stroke-width: 5px;
+        stroke: #E44848;
+        z-index: 1212;
     }
 
 }
 
 
 
-.details-card-hr {
 
+
+.details-card-hr {
+    margin-top: -25px;
     width: 902px;
-    height: 0px;
-    flex-shrink: 0;
-    stroke-width: 1px;
+    height: 1px;
     stroke: rgba(16, 24, 40, 0.20);
 }

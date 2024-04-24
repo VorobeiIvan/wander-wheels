@@ -1,11 +1,11 @@
 import { cardDetailsIcon as icons } from 'utils/cardDetailsIcon';
 
-const CardDetailsList = ({ details, exceptions }) => {
+const CardDetailsList = ({ details, exceptions, numberOfCards }) => {
   if (!details) {
     return null;
   }
 
-  const firstSixEntries = Object.entries(details).slice(0, 6);
+  const firstSixEntries = Object.entries(details).slice(0, `${numberOfCards}`);
 
   return (
     <ul className="card-details-list">

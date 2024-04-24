@@ -1,0 +1,67 @@
+.reviews {
+    display: flex;
+    gap: 24px;
+}
+
+.vehicle-details-wrapper {}
+
+.reviews-item {
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.reviews-text {
+    color: var(--Gray-600, #475467);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background: #F2F4F7;
+    display: grid;
+    place-items: center;
+    color: #E44848;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.reviews-name {
+    color: var(--Gray-900, #101828);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /* 133.333% */
+}
+
+.reviews-header {
+    display: flex;
+    gap: 16px;
+}
+
+.reviews-info svg {
+    width: 16px;
+    height: 16px;
+}
+
+.no-active {
+    fill: #475467;
+    stroke: #475467;
+}

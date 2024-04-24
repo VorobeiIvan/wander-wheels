@@ -29,6 +29,7 @@ const CardInfo = ({
       <CardDetailsList
         details={campersData[id].details}
         exceptions={['adults', 'Air conditione', 'hob', 'beds']}
+        numberOfCards={6}
       />
       <Button type={'button'} className="card-button" onClick={handleClick}>
         Show more

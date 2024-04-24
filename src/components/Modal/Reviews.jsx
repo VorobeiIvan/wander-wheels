@@ -2,29 +2,30 @@ import { BookingForm } from 'components';
 import { StarIcon } from 'components/Icons';
 
 const Reviews = ({ campersData, id }) => {
-  const renderStars = () => {
+  const renderStars = reviewer_rating => {
     const stars = [];
-    for (let i = 0; i < 5; i++) {
-      stars.push(
-        <StarIcon
-          key={i}
-          filled={i < campersData[id].reviews.reviewer_rating}
-        />
-      );
+    if (stars <= 5) {
+    }
+    for (let i = 0; i < reviewer_rating; i++) {
+      stars.push(<StarIcon key={i} />);
     }
     return stars;
   };
 
   return (
     <section className="reviews" id="reviews">
-      <ul>
-        {campersData.reviews.map(
-          ({ avatar: avatar_url, name: reviewer_name, review: comment }) => (
-            <li>
-              <img className="avatar" src={avatar_url} alt={reviewer_name} />
-              <h2>{reviewer_name}</h2>
-              {renderStars()}
-              <p>{comment}</p>
+      <ul className="reviews-list">
+        {campersData[id].reviews.map(
+          ({ avatar_url, reviewer_name, comment, reviewer_rating }) => (
+            <li className="reviews-item" key={reviewer_name}>
+              <div className="reviews-header">
+                <div className="avatar">{reviewer_name.slice(0, 1)}</div>
+                <div className="reviews-info">
+                  <p className="reviews-name">{reviewer_name}</p>
+                  {renderStars(reviewer_rating)}
+                </div>
+              </div>
+              <p className="reviews-text">{comment}</p>
             </li>
           )
         )}

@@ -1,34 +1,52 @@
-import { NavLink, Outlet, useParams } from 'react-router-dom';
-import { Button } from 'components';
+import { Button, Features, Reviews } from 'components';
 import { CloseBtnIcon } from 'components/Icons';
 import ModalCardInfo from './ModalCardInfo';
+import { useState } from 'react';
 
 const ModalContent = ({ id, campersData, onClose }) => {
-  const { detailsId } = useParams();
+  const [activeTab, setActiveTab] = useState('');
+
+  const handleTabChange = tab => {
+    setActiveTab(tab);
+  };
   const handleClose = () => {
     onClose();
   };
-
   return (
     <div className="details-popup">
       <Button
         className="details-close-button"
         onClick={handleClose}
-        type={'button'}
+        type="button"
       >
         <CloseBtnIcon />
       </Button>
       <ModalCardInfo campersData={campersData} id={id} />
-      <div className="details-card-link-wrapper">
-        <NavLink className="details-card-link" to={`${detailsId}/features`}>
+      <div className="details-card-links-wrapper">
+        <Button
+          className={`details-card-link ${
+            activeTab === 'features' ? 'active' : ''
+          }`}
+          onClick={() => handleTabChange('features')}
+          type="button"
+        >
           Features
-        </NavLink>
-        <NavLink className="details-card-link" to={`${detailsId}/reviews`}>
+        </Button>
+        <Button
+          className={`details-card-link ${
+            activeTab === 'reviews' ? 'active' : ''
+          }`}
+          onClick={() => handleTabChange('reviews')}
+          type="button"
+        >
           Reviews
-        </NavLink>
+        </Button>
       </div>
-      <Outlet />
       <hr className="details-card-hr" />
+      {activeTab === 'features' && (
+        <Features campersData={campersData} id={id} />
+      )}
+      {activeTab === 'reviews' && <Reviews campersData={campersData} id={id} />}
     </div>
   );
 };

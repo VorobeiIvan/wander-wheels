@@ -1,4 +1,4 @@
-const StarIcon = () => {
+const StarIcon = ({ className }) => {
   return (
     <svg
       width="16"
@@ -6,6 +6,7 @@ const StarIcon = () => {
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <g clipPath="url(#clip0_58_176)">
         <path
